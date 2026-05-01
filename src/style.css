@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #090b10;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+.dashboard-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 16px;
+}
+
+.glass-card {
+  background: rgba(20, 24, 35, 0.85);
+  border: 1px solid rgba(108, 99, 255, 0.25);
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.hero-card {
+  grid-column: span 8;
+}
+
+.projects-card,
+.dashboard-grid>.glass-card:nth-child(3) {
+  grid-column: span 12;
+}
+
+.dashboard-grid>.glass-card:nth-child(2) {
+  grid-column: span 4;
+}
+
+.skill-chip {
+  margin: 4px;
+}
+
+.job-list {
+  margin: 0;
+}
+
+.job-list li {
+  margin-bottom: 6px;
+  color: #c7cde0;
+}
+
+.project-item {
+  background: rgba(12, 15, 23, 0.9);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 1024px) {
+
+  .hero-card,
+  .dashboard-grid>.glass-card:nth-child(2),
+  .projects-card,
+  .dashboard-grid>.glass-card:nth-child(3) {
+    grid-column: span 12;
+  }
+}
+
+.header-row {
+  gap: 15px;
+}
+
+.profile-avatar {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  border-radius: 50%;
+}
+
+.profile-avatar-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 260px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-slide {
+  padding: 0;
+  overflow: hidden;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 160px;
+  /* 👈 adjust size here */
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 👈 makes images look perfect */
+  display: block;
+}
+
+.project-item .q-card__section {
+  /* height: 212px; */
+}
