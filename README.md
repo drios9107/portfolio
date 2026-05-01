@@ -25,10 +25,10 @@ A modern, responsive portfolio website built with **Vue 3** and **Quasar Framewo
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/dev-portfolio.git
+git clone https://github.com/drios9107/portfolio
 
 # Navigate to project directory
-cd dev-portfolio
+cd portfolio
 
 # Install dependencies
 npm install
