@@ -83,7 +83,9 @@ const projects = [
         stack: 'React + Node.js',
         description:
             'Fullstack expense tracking app with role-based access, debt reminders, and multi-currency support.',
-        image: '/projects/project-expenses.png',
+        images: [
+            '/projects/expenses-tracker/1.png'
+        ],
     },
     {
         name: 'Banking Operations Dashboard (Wimcorp)',
