@@ -1,5 +1,5 @@
 const profile = {
-    name: 'David Rios Pena',
+    name: 'David Rios Peña',
     title: 'Senior Fullstack Engineer',
     location: 'Las Tunas, Cuba',
     email: 'drios9107@gmail.com',
@@ -8,7 +8,7 @@ const profile = {
     photoUrl: '/avatar.jpg',
     years: `${new Date().getFullYear() - 2015}+ years`,
     summary:
-        'Senior Fullstack Developer focused on scalable web and mobile products across banking, analytics, and government sectors.',
+        'Senior Fullstack Developer focused on scalable web products across banking, analytics, and government sectors.',
 }
 
 const skills = [

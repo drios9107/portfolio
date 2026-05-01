@@ -94,8 +94,11 @@ const slides = ref(projects.map(() => 0))
             <q-separator dark />
             <q-card-section>
               <div class="row q-col-gutter-md">
-                <div v-for="(project,position) in projects" :key="project.name" class="col-12 col-sm-6">
+                <div v-for="(project,position) in projects" :key="project.name" class="col-12 col-sm-6" v-if="projects.length">
                   <q-card flat class="project-item">
+                    <div style="height: 160px;" v-if="project?.images?.length===1">
+                      <img :src="project?.images?.[0]" style="width: 100%; height: 100%; object-fit: cover;  border-radius: inherit;" />
+                    </div>
                     <q-carousel
                       v-model="slides[position]"
                       animated
@@ -108,6 +111,7 @@ const slides = ref(projects.map(() => 0))
                       control-color="primary"
                       :transition-duration="500"
                       :autoplay-duration="3000"
+                      v-if="project?.images?.length>1"
                     >
                       <q-carousel-slide
                         v-for="(img, index) in project.images"
