@@ -1,5 +1,40 @@
-# Vue 3 + Vite
+# 🚀 Interactive Developer Portfolio
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A modern, responsive portfolio website built with **Vue 3** and **Quasar Framework**, featuring a sleek glass-morphism design, interactive project carousels, and comprehensive professional presentation.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## ✨ Features
+
+- 🎨 **Glass-morphism UI** with dark theme
+- 🖼️ **Interactive project carousels** with autoplay and navigation
+- 📱 **Fully responsive** design (mobile to desktop)
+- ⚡ **Fast performance** with Vue 3 Composition API
+- 🎯 **Skills showcase** with visual chips
+- 💼 **Professional timeline** for work experience
+- 🔄 **Auto-sliding carousels** with loop functionality
+- 🌐 **Social links integration**
+
+## 🛠️ Tech Stack
+
+- **Framework:** Vue 3 (Composition API)
+- **UI Library:** Quasar Framework v2
+- **Language:** JavaScript/TypeScript-ready
+- **Styling:** SCSS + Quasar styling system
+- **Icons:** Material Icons
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/dev-portfolio.git
+
+# Navigate to project directory
+cd dev-portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
