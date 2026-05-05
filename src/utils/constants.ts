@@ -1,4 +1,6 @@
-const profile = {
+import { IExperience, IProfile, IProject } from "./types";
+
+const profile: IProfile = {
     name: 'David Rios Peña',
     title: 'Senior Fullstack Engineer',
     location: 'Las Tunas, Cuba',
@@ -11,7 +13,7 @@ const profile = {
         'Senior Fullstack Developer focused on scalable web products across banking, analytics, and government sectors.',
 }
 
-const skills = [
+const skills: string[] = [
     'React',
     'Next.js',
     'Vue.js',
@@ -21,11 +23,13 @@ const skills = [
     'Firebase',
     'Laravel',
     'PostgreSQL',
+    'MySql',
+    'MongoDB',
     'GraphQL',
-    'MongoDB'
+    'RestApi'
 ]
 
-const experience = [
+const experience: IExperience[] = [
     {
         company: 'Wimix Solutions',
         role: 'Fullstack Developer',
@@ -44,6 +48,7 @@ const experience = [
             'Developed SSR analytics dashboards with Next.js.',
             'Implemented backend services with Node.js and Firebase.',
             'Contributed to React Native cross-platform products.',
+            'Integrated an AI assistant for decision support'
         ],
     },
     {
@@ -77,7 +82,7 @@ const experience = [
     },
 ]
 
-const projects = [
+const projects: IProject[] = [
     {
         name: 'Expenses Tracker',
         stack: 'React + Node.js',
@@ -124,14 +129,12 @@ const projects = [
         stack: 'Next.js + Firebase + AI Integration',
         description:
             'Data-driven platform for analyzing datasets, featuring interactive dashboards and an AI assistant to support user decision-making.',
-        image: '/projects/project-forts.png',
     },
     {
         name: 'Influencer Analytics Platform (Influencer Advisor)',
         stack: 'Vue.js + Laravel',
         description:
             'Analytics platform with data visualization and performance tracking for influencer campaigns.',
-        image: '/projects/project-influencer.png',
     },
     {
         name: 'Pharmaceutical Web App (Galenicum)',
@@ -180,14 +183,12 @@ const projects = [
         stack: 'Odoo + React',
         description:
             'Developed and maintained multiple enterprise applications with custom modules and integrations.',
-        image: '/projects/project-odoo.png',
     },
     {
         name: 'Private Client',
         stack: 'ASP.NET MVC + SQL Server',
         description:
             'Built enterprise-grade applications for institutional clients, focusing on reliability and data integrity.',
-        image: '/projects/project-dotnet.png',
     },
 ];
 
