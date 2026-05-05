@@ -28,17 +28,21 @@ import { experience, profile, skills } from './utils/constants';
                 {{ profile.summary }}
               </p>
               <div class="q-mt-md row q-gutter-sm">
-                <q-chip color="primary" text-color="white" icon="mail">
-                  {{ profile.email }}
-                </q-chip>
-                <q-chip color="secondary" text-color="white" icon="call">
-                  {{ profile.phone }}
-                </q-chip>  
+                <a :href="`mailto:${profile.email}`" target="_blank" class="no-margin">
+                  <q-chip color="primary" text-color="white" icon="mail" class="chip">
+                    {{ profile.email }}
+                  </q-chip>
+                </a>
+                <a :href="`https://wa.me/${profile.phone.replace(' ','')}`" target="_blank" class="no-margin">
+                  <q-chip color="secondary" text-color="white" icon="fa-brands fa-whatsapp" class="chip">
+                    {{ profile.phone }}
+                  </q-chip>
+                </a>
                 <a :href="profile.linkedin" target="_blank" class="no-margin">
-                  <q-chip color="info" text-color="white" icon="fa-brands fa-linkedin" class="linkedin-icon">
+                  <q-chip color="info" text-color="white" icon="fa-brands fa-linkedin" class="chip">
                     LinkedIn
                   </q-chip>
-              </a>
+                </a>
               </div>
             </q-card-section>
           </q-card>
@@ -47,13 +51,7 @@ import { experience, profile, skills } from './utils/constants';
             <q-card-section>
               <div class="text-h6 text-weight-medium">Core Skills</div>
               <div class="q-mt-sm q-gutter-sm">
-                <q-chip
-                  v-for="skill in skills"
-                  :key="skill"
-                  color="grey-9"
-                  text-color="grey-2"
-                  class="skill-chip"
-                >
+                <q-chip v-for="skill in skills" :key="skill" color="grey-9" text-color="grey-2" class="skill-chip">
                   {{ skill }}
                 </q-chip>
               </div>
@@ -64,13 +62,8 @@ import { experience, profile, skills } from './utils/constants';
             <q-card-section>
               <div class="text-h6 text-weight-medium">Professional Experience</div>
               <q-timeline color="primary" class="q-mt-md">
-                <q-timeline-entry
-                  v-for="job in experience"
-                  :key="job.company"
-                  :title="job.company"
-                  :subtitle="`${job.role} • ${job.period}`"
-                  icon="work"
-                >
+                <q-timeline-entry v-for="job in experience" :key="job.company" :title="job.company"
+                  :subtitle="`${job.role} • ${job.period}`" icon="work">
                   <ul class="job-list q-pl-md">
                     <li v-for="item in job.highlights" :key="item">{{ item }}</li>
                   </ul>
@@ -94,7 +87,9 @@ import { experience, profile, skills } from './utils/constants';
 </template>
 
 <style scoped>
-.linkedin-icon{
-  height:28px; margin: 8px 4px 4px 8px;
+.chip {
+  user-select: none;
+  height: 28px;
+  margin: 8px 4px 4px 8px;
 }
 </style>

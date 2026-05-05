@@ -10,7 +10,7 @@ const profile: IProfile = {
     photoUrl: '/avatar.jpg',
     years: `${new Date().getFullYear() - 2015}+ years`,
     summary:
-        'Senior Fullstack Developer focused on scalable web products across banking, analytics, and government sectors.',
+        'Senior Fullstack Developer focused on scalable web products across banking, analytics and public sectors. Experienced in React, Next.js and Node.js, building performant, user-focused applications and integrating complex backend systems. Comfortable working in distributed Agile teams and delivering features from concept to production.',
 }
 
 const skills: string[] = [
