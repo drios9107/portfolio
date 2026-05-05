@@ -123,7 +123,8 @@ const projects: IProject[] = [
             '/projects/sinergia-mobile-app/sinergia_app1.png',
             '/projects/sinergia-mobile-app/sinergia_app2.png',
             '/projects/sinergia-mobile-app/sinergia_app3.png',
-        ]
+        ],
+        useFitContainImage: true
     },
     {
         name: 'Forts Analytics Platform (Forts)',
