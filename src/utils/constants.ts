@@ -130,18 +130,6 @@ const projects: IProject[] = [
         extraClasses:'fit-contain'
     },
     {
-        name: 'Forts Analytics Platform (Forts)',
-        stack: 'Next.js + Firebase + AI Integration',
-        description:
-            'Data-driven platform for analyzing datasets, featuring interactive dashboards and an AI assistant to support user decision-making.',
-    },
-    {
-        name: 'Influencer Analytics Platform (Influencer Advisor)',
-        stack: 'Vue.js + Laravel',
-        description:
-            'Analytics platform with data visualization and performance tracking for influencer campaigns.',
-    },
-    {
         name: 'Pharmaceutical Web App (Galenicum)',
         stack: 'JavaScript + PostgreSQL',
         description:
@@ -186,6 +174,18 @@ const projects: IProject[] = [
             '/projects/cobramus-platform/2.png'
         ],
         extraClasses:'fit-cover'
+    },
+    {
+        name: 'Forts Analytics Platform (Forts)',
+        stack: 'Next.js + Firebase + AI Integration',
+        description:
+            'Data-driven platform for analyzing datasets, featuring interactive dashboards and an AI assistant to support user decision-making.',
+    },
+    {
+        name: 'Influencer Analytics Platform (Influencer Advisor)',
+        stack: 'Vue.js + Laravel',
+        description:
+            'Analytics platform with data visualization and performance tracking for influencer campaigns.',
     },
     {
         name: 'Enterprise ERP Systems',
