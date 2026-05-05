@@ -1,6 +1,8 @@
 <script setup>
+import JobsSection from './components/JobsSection.vue';
 import LinksSection from './components/LinksSection.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
+import SkillsSection from './components/SkillsSection.vue';
 import { experience, profile, skills } from './utils/constants';
 
 </script>
@@ -32,39 +34,9 @@ import { experience, profile, skills } from './utils/constants';
             </q-card-section>
           </q-card>
 
-          <q-card flat bordered class="glass-card">
-            <q-card-section>
-              <div class="text-h6 text-weight-medium">Core Skills</div>
-              <div class="q-mt-sm q-gutter-sm">
-                <q-chip v-for="skill in skills" :key="skill" color="grey-9" text-color="grey-2" class="skill-chip">
-                  {{ skill }}
-                </q-chip>
-              </div>
-            </q-card-section>
-          </q-card>
-
-          <q-card flat bordered class="glass-card">
-            <q-card-section>
-              <div class="text-h6 text-weight-medium">Professional Experience</div>
-              <q-timeline color="primary" class="q-mt-md">
-                <q-timeline-entry v-for="job in experience" :key="job.company" :title="job.company"
-                  :subtitle="`${job.role} • ${job.period}`" icon="work">
-                  <ul class="job-list q-pl-md">
-                    <li v-for="item in job.highlights" :key="item">{{ item }}</li>
-                  </ul>
-                </q-timeline-entry>
-              </q-timeline>
-            </q-card-section>
-          </q-card>
-
-          <q-card flat bordered class="glass-card projects-card">
-            <q-card-section class="row items-center justify-between">
-              <div class="text-h6 text-weight-medium">Project Showcase</div>
-            </q-card-section>
-            <q-card-section>
-              <ProjectsSection />
-            </q-card-section>
-          </q-card>
+          <SkillsSection/>
+          <JobsSection/>
+          <ProjectsSection />
         </div>
       </q-page>
     </q-page-container>
@@ -72,9 +44,5 @@ import { experience, profile, skills } from './utils/constants';
 </template>
 
 <style scoped>
-.chip {
-  user-select: none;
-  height: 28px;
-  margin: 8px 4px 4px 8px;
-}
+
 </style>

@@ -36,19 +36,6 @@ body {
   grid-column: span 4;
 }
 
-.skill-chip {
-  margin: 4px;
-}
-
-.job-list {
-  margin: 0;
-}
-
-.job-list li {
-  margin-bottom: 6px;
-  color: #c7cde0;
-}
-
 .project-item {
   background: rgba(12, 15, 23, 0.9);
   border-radius: 12px;

@@ -13,3 +13,11 @@ const props = defineProps({
         </q-chip>
     </a>
 </template>
+
+<style scoped>
+.chip {
+    user-select: none;
+    height: 28px;
+    margin: 8px 4px 4px 8px;
+}
+</style>
