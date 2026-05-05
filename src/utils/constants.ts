@@ -76,7 +76,7 @@ const experience: IExperience[] = [
         role: 'Fullstack Developer',
         period: 'Sep 2015 - Dec 2018',
         highlights: [
-            'Developed enterprise web applications using ASP.NET MVC and SQL Server for institutional and government',
+            'Developed enterprise web applications using ASP.NET MVC and SQL Server',
             'Built and maintained fullstack systems, gaining strong experience in backend architecture and database design',
         ],
     },
