@@ -35,9 +35,10 @@ const experience: IExperience[] = [
         role: 'Fullstack Developer',
         period: 'Aug 2025 - Feb 2026',
         highlights: [
-            'Built banking dashboards with Vue.js + Quasar.',
-            'Integrated frontend modules with REST APIs.',
-            'Delivered features in Agile cross-functional teams.',
+            'Built banking dashboards using Vue.js and Quasar for financial operations.',
+            'Developed backend services and APIs with Node.js and NestJS, supporting scalable and maintainable architectures.',
+            'Integrated frontend applications with REST APIs and real-time data flows.',
+            'Delivered production-ready features in Agile, cross-functional teams.',
         ],
     },
     {
@@ -94,7 +95,7 @@ const projects: IProject[] = [
     },
     {
         name: 'Banking Operations Dashboard (Wimcorp)',
-        stack: 'Vue + Quasar',
+        stack: 'Vue + Quasar + NestJS',
         description:
             'Internal dashboard for financial operations monitoring and workflow management.',
         images: [
