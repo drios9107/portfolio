@@ -77,7 +77,6 @@ body {
 .carousel-image {
   width: 100%;
   height: 160px;
-  /* 👈 adjust size here */
   border-radius: 12px;
   overflow: hidden;
 }
@@ -86,10 +85,5 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* 👈 makes images look perfect */
   display: block;
-}
-
-.project-item .q-card__section {
-  /* height: 212px; */
 }
