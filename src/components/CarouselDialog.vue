@@ -7,23 +7,29 @@ const slides = ref<number[]>(projects.map(() => 0))
 
 const props = defineProps<{
     project: IProject
-    getImageClasses:(string | { [key: string]: boolean })[]
 }>()
 const dialog = defineModel<boolean>('dialog', { required: true })
 
+const getImageClasses = computed(() => props.project ?
+    [
+        'carousel-img shadow-4', {
+            'fit-cover full-width full-height': !props.project.useFitContainImage,
+            'fit-contain-mobile': props.project.useFitContainImage
+        }] :
+    [])
 </script>
 
 <template>
     <q-dialog v-model="dialog" persistent>
         <q-card class="dialog-card">
             <div class="project-thumbnail" v-if="props.project?.images?.length === 1">
-                <img :src="props.project?.images?.[0]" :class="props.getImageClasses" />
+                <img :src="props.project?.images?.[0]" :class="getImageClasses" />
             </div>
             <q-carousel v-if="props.project" v-model="slides[projects.indexOf(props.project)]" animated swipeable arrows
                 navigation height="400px" autoplay infinite control-color="primary" :transition-duration="500"
                 :autoplay-duration="3000" class="carousel-container">
                 <q-carousel-slide v-for="(img, i) in props.project.images" :key="i" :name="i" class="flex flex-center">
-                    <img :src="img" :class="props.getImageClasses" />
+                    <img :src="img" :class="getImageClasses" />
                 </q-carousel-slide>
             </q-carousel>
 
@@ -36,10 +42,6 @@ const dialog = defineModel<boolean>('dialog', { required: true })
 
 <style scoped>
 .carousel-container {
-    border-radius: 12px;
-}
-
-.carousel-img {
     border-radius: 12px;
 }
 

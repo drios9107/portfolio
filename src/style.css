@@ -33,13 +33,6 @@ body {
   grid-column: span 4;
 }
 
-.project-item {
-  background: rgba(12, 15, 23, 0.9);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  min-height: 160px;
-}
-
 @media (max-width: 1024px) {
 
   .hero-card,
@@ -54,36 +47,6 @@ body {
   gap: 15px;
 }
 
-.project-image {
-  width: 100%;
-  max-width: 260px;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
+.carousel-img {
   border-radius: 12px;
-}
-
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.carousel-slide {
-  padding: 0;
-  overflow: hidden;
-}
-
-.carousel-image {
-  width: 100%;
-  height: 160px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.carousel-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
 }

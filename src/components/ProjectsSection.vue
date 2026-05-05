@@ -15,13 +15,16 @@ const openModal = (project: IProject) => {
   }
 }
 
-const getImageClasses = computed(() => activeProject.value ?
-  [
-    'carousel-img shadow-4', {
-      'fit-cover full-width full-height': !activeProject.value.useFitContainImage,
-      'fit-contain-mobile': activeProject.value.useFitContainImage
-    }] :
-  [])
+const getThumbnailClasses = (project: IProject) => [
+  'project-thumbnail',
+  'shadow-2',
+  project.images?.[0] ? 'cursor-pointer' : '',
+  {
+    'fit-cover': !project.useFitContainImage,
+    'fit-contain-mobile-thumb': project.useFitContainImage
+  }
+]
+
 </script>
 
 <template>
@@ -36,7 +39,7 @@ const getImageClasses = computed(() => activeProject.value ?
           <q-card flat class="row flex justify-between project-item">
             <div class="thumbnail" @click="() => openModal(project)">
               <img :src="project?.images?.[0] ?? '/no-img.svg'"
-                :class="`fit-cover ${project?.images?.[0] && 'cursor-pointer'} project-thumbnail`"
+                :class="[getThumbnailClasses(project), `${project?.images?.[0] && 'cursor-pointer'}, project-thumbnail`]"
                 style="border-radius: 12px;" />
             </div>
 
@@ -52,8 +55,7 @@ const getImageClasses = computed(() => activeProject.value ?
   </q-card>
 
 
-  <carousel-dialog :project="activeProject" v-model:dialog="dialog" :getImageClasses="getImageClasses"
-    v-if="dialog && activeProject" />
+  <carousel-dialog :project="activeProject" v-model:dialog="dialog" v-if="dialog && activeProject" />
 </template>
 
 
@@ -61,5 +63,17 @@ const getImageClasses = computed(() => activeProject.value ?
 .project-thumbnail {
   width: 200px;
   height: 160px;
+}
+
+.project-item {
+  background: rgba(12, 15, 23, 0.9);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  min-height: 160px;
+}
+
+.fit-contain-mobile-thumb {
+  object-fit: contain;
+  background: rgba(12, 15, 23, 0.9);
 }
 </style>
