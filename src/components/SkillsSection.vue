@@ -18,6 +18,7 @@ import { skills } from 'src/utils/constants';
 
 <style scoped>
 .skill-chip {
-  margin: 4px;
+    margin: 4px;
+    user-select: none;
 }
 </style>
