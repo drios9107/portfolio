@@ -12,14 +12,14 @@ const dialog = defineModel<boolean>('dialog', { required: true })
 
 const getImageClasses = computed(() => props.project ?
     [
-        'carousel-img shadow-4', {
-            'fit-cover full-width full-height': !props.project.useFitContainImage,
-            'fit-contain-mobile': props.project.useFitContainImage
-        }] :
+        'carousel-img shadow-4', props.project.extraClasses, {
+            'full-width full-height': props.project.extraClasses === 'fit-cover',
+            'fit-contain-mobile': props.project.extraClasses === 'fit-contain',
+        }
+    ] :
     [])
 
 const hasManyProjects = computed(() => props.project?.images?.length > 1)
-console.log('***here', props.project.images)
 </script>
 
 <template>

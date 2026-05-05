@@ -92,6 +92,7 @@ const projects: IProject[] = [
         images: [
             '/projects/expenses-tracker/1.png'
         ],
+        extraClasses:'fit-cover'
     },
     {
         name: 'Banking Operations Dashboard (Wimcorp)',
@@ -101,7 +102,8 @@ const projects: IProject[] = [
         images: [
             '/projects/banking-dashboard-wimcorp/1.png',
             '/projects/banking-dashboard-wimcorp/3.png',
-        ]
+        ],
+        extraClasses:'fit-cover'
     },
     {
         name: 'Booking and Analytics Platform (Sinergia / Aqva)',
@@ -112,7 +114,8 @@ const projects: IProject[] = [
             '/projects/sinergia-analytics-platform/sinergia1.png',
             '/projects/sinergia-analytics-platform/sinergia2.png',
             '/projects/sinergia-analytics-platform/sinergia3.png',
-        ]
+        ],
+        extraClasses:'fit-cover'
     },
     {
         name: 'Asset Booking Mobile App (Sinergia App)',
@@ -124,7 +127,7 @@ const projects: IProject[] = [
             '/projects/sinergia-mobile-app/sinergia_app2.png',
             '/projects/sinergia-mobile-app/sinergia_app3.png',
         ],
-        useFitContainImage: true
+        extraClasses:'fit-contain'
     },
     {
         name: 'Forts Analytics Platform (Forts)',
@@ -148,7 +151,8 @@ const projects: IProject[] = [
             '/projects/galenicum-web-app/2.png',
             '/projects/galenicum-web-app/3.png',
             '/projects/galenicum-web-app/4.png',
-        ]
+        ],
+        extraClasses:'fit-cover'
     },
     {
         name: 'Event Platform (Iberdrola 2022)',
@@ -156,6 +160,7 @@ const projects: IProject[] = [
         description:
             'Fullstack features for an enterprise energy platform focused on performance and scalability.',
         images: ['/projects/iberdrola-platform/iberdrola.png'],
+        extraClasses:'fit-cover'
     },
     {
         name: 'Company Dashboard (Inuba)',
@@ -169,6 +174,7 @@ const projects: IProject[] = [
             '/projects/inuba-dashboard/4.png',
             '/projects/inuba-dashboard/5.png',
         ],
+        extraClasses:'fit-cover'
     },
     {
         name: 'Enterprise Web Platform (Cobramus)',
@@ -178,7 +184,8 @@ const projects: IProject[] = [
         images: [
             '/projects/cobramus-platform/1.png',
             '/projects/cobramus-platform/2.png'
-        ]
+        ],
+        extraClasses:'fit-cover'
     },
     {
         name: 'Enterprise ERP Systems',

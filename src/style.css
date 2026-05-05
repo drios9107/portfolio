@@ -62,3 +62,7 @@ body {
       transform: translateY(0);
   }
 }
+
+.fit-fill {
+    object-fit: fill;
+}

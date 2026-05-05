@@ -18,11 +18,11 @@ const openModal = (project: IProject) => {
 const getThumbnailClasses = (project: IProject) => [
   'project-thumbnail',
   'shadow-2',
-  project.images?.[0] ? 'cursor-pointer' : '',
+  project.extraClasses,
   {
-    'fit-cover': !project.useFitContainImage,
-    'fit-contain-mobile-thumb': project.useFitContainImage
-  }
+    'cursor-pointer': !!project.images?.[0],
+    'fit-contain-mobile-thumb': project.extraClasses === 'fit-contain'
+  },
 ]
 
 </script>
@@ -38,8 +38,7 @@ const getThumbnailClasses = (project: IProject) => [
         <div v-for="project in projects" :key="project.name" class="col-12 col-sm-6" v-if="projects.length">
           <q-card flat class="row flex justify-between project-item">
             <div class="thumbnail" @click="() => openModal(project)">
-              <img :src="project?.images?.[0] ?? '/no-img.svg'"
-                :class="[getThumbnailClasses(project), `${project?.images?.[0] && 'cursor-pointer'}, project-thumbnail`]"
+              <img :src="project?.images?.[0] ?? '/no-img.svg'" :class="getThumbnailClasses(project)"
                 style="border-radius: 12px;" />
             </div>
 

@@ -3,7 +3,7 @@ export interface IProject {
     stack: string,
     description: string,
     images?: string[],
-    useFitContainImage?: boolean
+    extraClasses?:string
 }
 
 export interface IExperience {
