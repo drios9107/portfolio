@@ -1,4 +1,5 @@
 <script setup>
+import LinksSection from './components/LinksSection.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
 import { experience, profile, skills } from './utils/constants';
 
@@ -27,23 +28,7 @@ import { experience, profile, skills } from './utils/constants';
               <p class="q-mt-md text-body1">
                 {{ profile.summary }}
               </p>
-              <div class="q-mt-md row q-gutter-sm">
-                <a :href="`mailto:${profile.email}`" target="_blank" class="no-margin">
-                  <q-chip color="primary" text-color="white" icon="mail" class="chip">
-                    {{ profile.email }}
-                  </q-chip>
-                </a>
-                <a :href="`https://wa.me/${profile.phone.replace(' ','')}`" target="_blank" class="no-margin">
-                  <q-chip color="secondary" text-color="white" icon="fa-brands fa-whatsapp" class="chip">
-                    {{ profile.phone }}
-                  </q-chip>
-                </a>
-                <a :href="profile.linkedin" target="_blank" class="no-margin">
-                  <q-chip color="info" text-color="white" icon="fa-brands fa-linkedin" class="chip">
-                    LinkedIn
-                  </q-chip>
-                </a>
-              </div>
+              <LinksSection/>
             </q-card-section>
           </q-card>
 
