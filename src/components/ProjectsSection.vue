@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { projects } from '../utils/constants'
 import { IProject } from '../utils/types'
 import CarouselDialog from './CarouselDialog.vue'
@@ -14,6 +14,14 @@ const openModal = (project: IProject) => {
     dialog.value = true
   }
 }
+
+const getImageClasses = computed(() => activeProject.value ?
+  [
+    'carousel-img shadow-4', {
+      'fit-cover full-width full-height': !activeProject.value.useFitContainImage,
+      'fit-contain-mobile': activeProject.value.useFitContainImage
+    }] :
+  [])
 </script>
 
 <template>
@@ -44,7 +52,8 @@ const openModal = (project: IProject) => {
   </q-card>
 
 
-  <carousel-dialog :project="activeProject" v-model:dialog="dialog"/>
+  <carousel-dialog :project="activeProject" v-model:dialog="dialog" :getImageClasses="getImageClasses"
+    v-if="dialog && activeProject" />
 </template>
 
 
@@ -53,5 +62,4 @@ const openModal = (project: IProject) => {
   width: 200px;
   height: 160px;
 }
-
 </style>
