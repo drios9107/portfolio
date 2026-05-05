@@ -17,17 +17,20 @@ const getImageClasses = computed(() => props.project ?
             'fit-contain-mobile': props.project.useFitContainImage
         }] :
     [])
+
+const hasManyProjects = computed(() => props.project?.images?.length > 1)
+console.log('***here', props.project.images)
 </script>
 
 <template>
     <q-dialog v-model="dialog" persistent>
         <q-card class="dialog-card">
-            <div class="project-thumbnail" v-if="props.project?.images?.length === 1">
-                <img :src="props.project?.images?.[0]" :class="getImageClasses" />
+            <div v-if="!hasManyProjects" class="flex flex-center q-pa-md" style="height: 400px;">
+                <img :src="props.project.images[0]" :class="getImageClasses" />
             </div>
-            <q-carousel v-if="props.project" v-model="slides[projects.indexOf(props.project)]" animated swipeable arrows
-                navigation height="400px" autoplay infinite control-color="primary" :transition-duration="500"
-                :autoplay-duration="3000" class="carousel-container">
+            <q-carousel v-if="hasManyProjects" v-model="slides[projects.indexOf(props.project)]" animated swipeable
+                arrows navigation autoplay infinite :autoplay-duration="3000" :transition-duration="500" height="400px"
+                control-color="primary" class="carousel-container">
                 <q-carousel-slide v-for="(img, i) in props.project.images" :key="i" :name="i" class="flex flex-center">
                     <img :src="img" :class="getImageClasses" />
                 </q-carousel-slide>
@@ -41,6 +44,10 @@ const getImageClasses = computed(() => props.project ?
 </template>
 
 <style scoped>
+.carousel-img {
+    border-radius: 12px;
+}
+
 .carousel-container {
     border-radius: 12px;
 }

@@ -5,7 +5,7 @@ import LinksSection from './LinksSection.vue';
 </script>
 
 <template>
-    <q-card flat bordered class="glass-card hero-card">
+    <q-card flat bordered class="glass-card hero-card scroll-reveal">
         <q-card-section>
             <div class="row items-center header-row">
                 <q-avatar size="72px" class="profile-avatar">
@@ -28,7 +28,7 @@ import LinksSection from './LinksSection.vue';
     </q-card>
 </template>
 
-<style>
+<style scoped>
 .hero-card {
     grid-column: span 8;
 }

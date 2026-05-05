@@ -4,7 +4,7 @@ import { skills } from 'src/utils/constants';
 </script>
 
 <template>
-    <q-card flat bordered class="glass-card">
+    <q-card flat bordered class="glass-card scroll-reveal">
         <q-card-section>
             <div class="text-h6 text-weight-medium">Core Skills</div>
             <div class="q-mt-sm q-gutter-sm">
