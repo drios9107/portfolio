@@ -3,6 +3,9 @@ import { computed, ref } from 'vue'
 import { projects } from '../utils/constants'
 import { IProject } from '../utils/types'
 import CarouselDialog from './CarouselDialog.vue'
+import { useQuasar } from 'quasar'
+
+const $q = useQuasar()
 
 const dialog = ref<boolean>(false)
 
@@ -36,7 +39,10 @@ const getThumbnailClasses = (project: IProject) => [
     <q-card-section>
       <div class="row q-col-gutter-md">
         <div v-for="project in projects" :key="project.name" class="col-12 col-sm-6" v-if="projects.length">
-          <q-card flat class="row flex justify-between project-item">
+          <q-card flat :class="[
+            $q.screen.lt.md ? 'column' : 'row',
+            'flex justify-between items-center project-item'
+          ]">
             <div class="thumbnail" @click="() => openModal(project)">
               <img :src="project?.images?.[0] ?? '/no-img.svg'" :class="getThumbnailClasses(project)"
                 style="border-radius: 12px;" />

@@ -24,7 +24,7 @@ const skillGroups = [
                     </div>
 
                     <div class="row q-gutter-sm">
-                        <q-chip v-for="skill in group.items" :key="skill.name || skill"
+                        <q-chip v-for="skill in group.items" :key="skill.name"
                             :color="skill.main ? 'primary' : 'grey-9'" text-color="white"
                             class="skill-chip select-none">
                             {{ skill.name || skill }}
