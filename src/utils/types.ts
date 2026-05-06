@@ -3,7 +3,7 @@ export interface IProject {
     stack: string,
     description: string,
     images?: string[],
-    extraClasses?:string
+    extraClasses?: string
 }
 
 export interface IExperience {
@@ -23,4 +23,16 @@ export interface IProfile {
     photoUrl: string,
     years: string,
     summary: string,
+}
+
+interface ISkill {
+    name: string,
+    main?: boolean
+}
+
+export interface ISkills {
+    frontend: ISkill[],
+    backend: ISkill[],
+    database: ISkill[],
+    api: ISkill[],
 }

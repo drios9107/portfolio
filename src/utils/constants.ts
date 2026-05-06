@@ -1,4 +1,4 @@
-import { IExperience, IProfile, IProject } from "./types";
+import { IExperience, IProfile, IProject, ISkills } from "./types";
 
 const profile: IProfile = {
     name: 'David Rios Peña',
@@ -13,21 +13,29 @@ const profile: IProfile = {
         'Senior Fullstack Developer focused on scalable web products across banking, analytics and public sectors. Experienced in React, Next.js and Node.js, building performant, user-focused applications and integrating complex backend systems. Comfortable working in distributed Agile teams and delivering features from concept to production.',
 }
 
-const skills: string[] = [
-    'React',
-    'Next.js',
-    'Vue.js',
-    'Quasar',
-    'TypeScript',
-    'Node.js',
-    'Firebase',
-    'Laravel',
-    'PostgreSQL',
-    'MySql',
-    'MongoDB',
-    'GraphQL',
-    'RestApi'
-]
+const skills: ISkills = {
+    frontend: [
+        { name: 'React', main: true },
+        { name: 'Next.js', main: true },
+        { name: 'Vue.js' },
+        { name: 'Quasar' }
+    ],
+    backend: [
+        { name: 'Node.js' },
+        { name: 'NestJS' },
+        { name: 'Firebase' },
+        { name: 'Laravel' }
+    ],
+    database: [
+        { name: 'PostgreSQL' },
+        { name: 'MySQL' },
+        { name: 'MongoDB' }
+    ],
+    api: [
+        { name: 'GraphQL' },
+        { name: 'REST' }
+    ],
+}
 
 const experience: IExperience[] = [
     {
@@ -92,7 +100,7 @@ const projects: IProject[] = [
         images: [
             '/projects/expenses-tracker/1.png'
         ],
-        extraClasses:'fit-cover'
+        extraClasses: 'fit-cover'
     },
     {
         name: 'Banking Operations Dashboard (Wimcorp)',
@@ -103,7 +111,7 @@ const projects: IProject[] = [
             '/projects/banking-dashboard-wimcorp/1.png',
             '/projects/banking-dashboard-wimcorp/3.png',
         ],
-        extraClasses:'fit-cover'
+        extraClasses: 'fit-cover'
     },
     {
         name: 'Booking and Analytics Platform (Sinergia / Aqva)',
@@ -115,7 +123,7 @@ const projects: IProject[] = [
             '/projects/sinergia-analytics-platform/sinergia2.png',
             '/projects/sinergia-analytics-platform/sinergia3.png',
         ],
-        extraClasses:'fit-cover'
+        extraClasses: 'fit-cover'
     },
     {
         name: 'Asset Booking Mobile App (Sinergia App)',
@@ -127,7 +135,7 @@ const projects: IProject[] = [
             '/projects/sinergia-mobile-app/sinergia_app2.png',
             '/projects/sinergia-mobile-app/sinergia_app3.png',
         ],
-        extraClasses:'fit-contain'
+        extraClasses: 'fit-contain'
     },
     {
         name: 'Pharmaceutical Web App (Galenicum)',
@@ -140,7 +148,7 @@ const projects: IProject[] = [
             '/projects/galenicum-web-app/3.png',
             '/projects/galenicum-web-app/4.png',
         ],
-        extraClasses:'fit-cover'
+        extraClasses: 'fit-cover'
     },
     {
         name: 'Event Platform (Iberdrola 2022)',
@@ -148,7 +156,7 @@ const projects: IProject[] = [
         description:
             'Fullstack features for an enterprise energy platform focused on performance and scalability.',
         images: ['/projects/iberdrola-platform/iberdrola.png'],
-        extraClasses:'fit-cover'
+        extraClasses: 'fit-cover'
     },
     {
         name: 'Company Dashboard (Inuba)',
@@ -162,7 +170,7 @@ const projects: IProject[] = [
             '/projects/inuba-dashboard/4.png',
             '/projects/inuba-dashboard/5.png',
         ],
-        extraClasses:'fit-cover'
+        extraClasses: 'fit-cover'
     },
     {
         name: 'Enterprise Web Platform (Cobramus)',
@@ -173,7 +181,7 @@ const projects: IProject[] = [
             '/projects/cobramus-platform/1.png',
             '/projects/cobramus-platform/2.png'
         ],
-        extraClasses:'fit-cover'
+        extraClasses: 'fit-cover'
     },
     {
         name: 'Forts Analytics Platform (Forts)',

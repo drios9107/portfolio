@@ -62,6 +62,11 @@ const getThumbnailClasses = (project: IProject) => [
 .project-thumbnail {
   width: 200px;
   height: 160px;
+  transition: transform 0.2s ease;
+}
+
+.project-thumbnail:hover {
+  transform: scale(1.03);
 }
 
 .project-item {
