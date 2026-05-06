@@ -1,4 +1,5 @@
 <script setup>
+import ContactFooter from './components/ContactFooter.vue';
 import JobsSection from './components/JobsSection.vue';
 import ProfileSection from './components/ProfileSection.vue';
 import ProjectsSection from './components/ProjectsSection.vue';
@@ -15,6 +16,7 @@ import SkillsSection from './components/SkillsSection.vue';
           <SkillsSection />
           <JobsSection />
           <ProjectsSection />
+          <ContactFooter />
         </div>
 
         <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
