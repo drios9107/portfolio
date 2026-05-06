@@ -3,7 +3,7 @@ import { projects } from 'src/utils/constants';
 import { type IProject } from 'src/utils/types'
 import { computed, ref } from 'vue';
 
-const slides = ref<number[]>(projects.map(() => 0))
+const slide = ref(0)
 
 const props = defineProps<{
     project: IProject
@@ -28,9 +28,9 @@ const hasManyProjects = computed(() => props.project?.images?.length > 1)
             <div v-if="!hasManyProjects" class="flex flex-center q-pa-md" style="height: 400px;">
                 <img :src="props.project.images[0]" :class="getImageClasses" />
             </div>
-            <q-carousel v-if="hasManyProjects" v-model="slides[projects.indexOf(props.project)]" animated swipeable
-                arrows navigation autoplay infinite :autoplay-duration="3000" :transition-duration="500" height="400px"
-                control-color="primary" class="carousel-container">
+            <q-carousel v-if="hasManyProjects" v-model="slide" animated swipeable arrows navigation autoplay infinite
+                :autoplay-duration="3000" :transition-duration="500" height="400px" control-color="primary"
+                class="carousel-container">
                 <q-carousel-slide v-for="(img, i) in props.project.images" :key="i" :name="i" class="flex flex-center">
                     <img :src="img" :class="getImageClasses" />
                 </q-carousel-slide>
