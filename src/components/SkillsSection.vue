@@ -12,7 +12,7 @@ const skillGroups = [
 </script>
 
 <template>
-    <q-card flat bordered class="glass-card scroll-reveal">
+    <q-card flat bordered class="glass-card scroll-reveal skills-card">
         <q-card-section>
             <div class="text-h6 text-weight-medium">Core Skills</div>
 
@@ -49,5 +49,9 @@ const skillGroups = [
 
 .skill-chip:hover {
     transform: translateY(-2px);
+}
+
+.skills-card {
+    grid-column: span 4;
 }
 </style>

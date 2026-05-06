@@ -29,10 +29,6 @@ import LinksSection from './LinksSection.vue';
 </template>
 
 <style scoped>
-.hero-card {
-    grid-column: span 8;
-}
-
 .profile-avatar {
     position: relative;
     overflow: hidden;
@@ -48,5 +44,9 @@ import LinksSection from './LinksSection.vue';
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.hero-card {
+    grid-column: span 8;
 }
 </style>

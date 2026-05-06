@@ -80,4 +80,8 @@ const getThumbnailClasses = (project: IProject) => [
   object-fit: contain;
   background: rgba(12, 15, 23, 0.9);
 }
+
+.projects-card {
+  grid-column: span 12;
+}
 </style>
