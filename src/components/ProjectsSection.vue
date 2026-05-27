@@ -48,7 +48,7 @@ const getThumbnailClasses = (project: IProject) => [
                 style="border-radius: 12px;" />
             </div>
 
-            <q-card-section style="flex:1">
+            <q-card-section style="flex:1; user-select: none">
               <div class="text-subtitle1 text-weight-medium">{{ project.name }}</div>
               <div class="text-caption text-primary">{{ project.stack }}</div>
               <p class="q-mt-sm text-body2 text-grey-4">{{ project.description }}</p>

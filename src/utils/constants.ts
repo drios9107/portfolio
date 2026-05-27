@@ -57,7 +57,7 @@ const experience: IExperience[] = [
             'Developed SSR analytics dashboards with Next.js.',
             'Implemented backend services with Node.js and Firebase.',
             'Contributed to React Native cross-platform products.',
-            'Integrated an AI assistant for decision support'
+            'Integrated an AI assistant for decision support.'
         ],
     },
     {
@@ -85,8 +85,8 @@ const experience: IExperience[] = [
         role: 'Fullstack Developer',
         period: 'Sep 2015 - Dec 2018',
         highlights: [
-            'Developed enterprise web applications using ASP.NET MVC and SQL Server',
-            'Built and maintained fullstack systems, gaining strong experience in backend architecture and database design',
+            'Developed enterprise web applications using ASP.NET MVC and SQL Server.',
+            'Built and maintained fullstack systems, gaining strong experience in backend architecture and database design.',
         ],
     },
 ]

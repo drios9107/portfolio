@@ -9,7 +9,7 @@ import { experience } from 'src/utils/constants';
             <div class="text-h6 text-weight-medium">Professional Experience</div>
             <q-timeline color="primary" class="q-mt-md">
                 <q-timeline-entry v-for="job in experience" :key="job.company" :title="job.company"
-                    :subtitle="`${job.role} • ${job.period}`" icon="work">
+                    :subtitle="`${job.role} • ${job.period}`" icon="work" style="user-select: none;">
                     <ul class="job-list q-pl-md">
                         <li v-for="item in job.highlights" :key="item">
                             <span class="job-item-text">{{ item }}</span>
@@ -32,7 +32,6 @@ import { experience } from 'src/utils/constants';
     position: relative;
     margin-bottom: 6px;
     color: #c7cde0;
-    user-select: none;
     padding-left: 14px;
 }
 
