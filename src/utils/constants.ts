@@ -103,7 +103,9 @@ const projects: IProject[] = [
         description:
             'Fullstack expense tracking app with role-based access, debt reminders, and multi-currency support.',
         images: [
-            '/projects/expenses-tracker/1.png'
+            '/projects/expenses-tracker/1.png',
+            '/projects/expenses-tracker/2.png',
+            '/projects/expenses-tracker/3.png'
         ],
         extraClasses: 'fit-cover'
     },
