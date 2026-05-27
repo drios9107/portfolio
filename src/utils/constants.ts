@@ -75,7 +75,7 @@ const experience: IExperience[] = [
         role: 'Fullstack Developer',
         period: 'Feb 2019 - Oct 2021',
         highlights: [
-            'Developed and maintained 8+ enterprise applications using Odoo and React for government and private sector clients.',
+            'Developed and maintained 8+ enterprise applications using Odoo and React for institutions.',
             'Built custom modules and user interfaces to extend platform functionality and improve usability.',
             'Participated in the full software development lifecycle, including requirements analysis, development, testing, and deployment.',
         ],
@@ -189,11 +189,11 @@ const projects: IProject[] = [
         description:
             'Data-driven platform for analyzing datasets, featuring interactive dashboards and an AI assistant to support user decision-making.',
         images: [
-            '/porjects/forts-analytics-platform/Screenshot_0.png',
-            '/porjects/forts-analytics-platform/Screenshot_1.png',
-            '/porjects/forts-analytics-platform/Screenshot_3.png',
-            '/porjects/forts-analytics-platform/Screenshot_4.png',
-            '/porjects/forts-analytics-platform/Screenshot_5.png',
+            '/projects/forts-analytics-platform/Screenshot_0.png',
+            '/projects/forts-analytics-platform/Screenshot_1.png',
+            '/projects/forts-analytics-platform/Screenshot_3.png',
+            '/projects/forts-analytics-platform/Screenshot_4.png',
+            '/projects/forts-analytics-platform/Screenshot_5.png',
         ]
     },
     {
@@ -204,9 +204,12 @@ const projects: IProject[] = [
     },
     {
         name: 'Enterprise ERP Systems',
-        stack: 'Odoo + React',
+        stack: 'Odoo',
         description:
             'Developed and maintained multiple enterprise applications with custom modules and integrations.',
+        images: [
+            '/projects/odoo-projects/odoo-logo.png'
+        ]
     },
     {
         name: 'Private Client',
