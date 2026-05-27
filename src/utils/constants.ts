@@ -194,7 +194,8 @@ const projects: IProject[] = [
             '/projects/forts-analytics-platform/Screenshot_3.png',
             '/projects/forts-analytics-platform/Screenshot_4.png',
             '/projects/forts-analytics-platform/Screenshot_5.png',
-        ]
+        ],
+        extraClasses: 'fit-cover'
     },
     {
         name: 'Influencer Analytics Platform (Influencer Advisor)',
@@ -209,7 +210,8 @@ const projects: IProject[] = [
             'Developed and maintained multiple enterprise applications with custom modules and integrations.',
         images: [
             '/projects/odoo-projects/odoo-logo.png'
-        ]
+        ],
+        extraClasses: 'fit-cover'
     },
     {
         name: 'Private Client',
