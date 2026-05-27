@@ -21,6 +21,16 @@ body {
   border: 1px solid rgba(108, 99, 255, 0.25);
   border-radius: 16px;
   backdrop-filter: blur(8px);
+  transition: box-shadow 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.glass-card:hover{
+  border-color: rgba(108, 99, 255, 0.55);
+  box-shadow:
+    0 0 0 1px rgba(108, 99, 255, 0.12),
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    0 0 28px rgba(108, 99, 255, 0.22);
+  transform: translateY(-2px);
 }
 
 .header-row {
