@@ -43,7 +43,7 @@ const getThumbnailClasses = (project: IProject) => [
             $q.screen.lt.md ? 'column' : 'row',
             'flex justify-between items-center project-item'
           ]">
-            <div class="thumbnail" @click="() => openModal(project)">
+            <div @click="() => openModal(project)">
               <img :src="project?.images?.[0] ?? '/no-img.svg'" :class="getThumbnailClasses(project)"
                 style="border-radius: 12px;" />
             </div>
@@ -66,8 +66,8 @@ const getThumbnailClasses = (project: IProject) => [
 
 <style>
 .project-thumbnail {
-  width: 200px;
-  height: 160px;
+  width: 150px;
+  height: 110px;
   transition: transform 0.2s ease;
 }
 
