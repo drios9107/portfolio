@@ -10,6 +10,7 @@ export interface IExperience {
     company: string,
     role: string,
     period: string,
+    logo?: string,
     highlights: string[],
 }
 

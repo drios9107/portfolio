@@ -43,6 +43,7 @@ const experience: IExperience[] = [
         company: 'Wimix Solutions',
         role: 'Fullstack Developer',
         period: 'Aug 2025 - Feb 2026',
+        logo: '/jobs/wimix.png',
         highlights: [
             'Built banking dashboards using Vue.js and Quasar for financial operations.',
             'Developed backend services and APIs with Node.js and NestJS, supporting scalable and maintainable architectures.',
@@ -54,6 +55,7 @@ const experience: IExperience[] = [
         company: 'Alphalabs',
         role: 'Fullstack Developer',
         period: 'Oct 2022 - May 2025',
+        logo: '/jobs/alphalabs.png',
         highlights: [
             'Developed SSR analytics dashboards with Next.js.',
             'Implemented backend services with Node.js and Firebase.',
@@ -65,6 +67,7 @@ const experience: IExperience[] = [
         company: 'InformageStudios',
         role: 'Fullstack Developer',
         period: 'Nov 2021 - Dec 2022',
+        logo: '/jobs/informage.jpg',
         highlights: [
             'Delivered fullstack features across multiple client industries.',
             'Built performant apps with Vue.js, Laravel, React, and Next.js.',
@@ -75,6 +78,7 @@ const experience: IExperience[] = [
         company: 'Desoft',
         role: 'Fullstack Developer',
         period: 'Feb 2019 - Oct 2021',
+        logo: '/jobs/desoft.png',
         highlights: [
             'Developed and maintained 8+ enterprise applications using Odoo and React for institutions.',
             'Built custom modules and user interfaces to extend platform functionality and improve usability.',
