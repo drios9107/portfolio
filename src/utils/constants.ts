@@ -24,7 +24,8 @@ const skills: ISkills = {
         { name: 'Node.js' },
         { name: 'NestJS' },
         { name: 'Firebase' },
-        { name: 'Laravel' }
+        { name: 'Laravel' },
+        { name: 'Odoo' },
     ],
     database: [
         { name: 'PostgreSQL' },
