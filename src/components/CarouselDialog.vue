@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { projects } from 'src/utils/constants';
 import { type IProject } from 'src/utils/types'
 import { computed, ref } from 'vue';
 

@@ -188,6 +188,13 @@ const projects: IProject[] = [
         stack: 'Next.js + Firebase + AI Integration',
         description:
             'Data-driven platform for analyzing datasets, featuring interactive dashboards and an AI assistant to support user decision-making.',
+        images: [
+            '/porjects/forts-analytics-platform/Screenshot_0.png',
+            '/porjects/forts-analytics-platform/Screenshot_1.png',
+            '/porjects/forts-analytics-platform/Screenshot_3.png',
+            '/porjects/forts-analytics-platform/Screenshot_4.png',
+            '/porjects/forts-analytics-platform/Screenshot_5.png',
+        ]
     },
     {
         name: 'Influencer Analytics Platform (Influencer Advisor)',
