@@ -31,10 +31,57 @@ import LinksSection from './LinksSection.vue';
 <style scoped>
 .profile-avatar {
     position: relative;
-    overflow: hidden;
-    border: 2px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    overflow: visible;
+    /* border: 2px solid rgba(255, 255, 255, 0.08); */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.17);
     border-radius: 50%;
+}
+
+.profile-avatar::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: calc(100% + 12px);
+    height: calc(100% + 12px);
+    border-radius: 9999px;
+    border: 1px solid rgba(90, 160, 255, 0.55);
+    box-shadow: 0 0 22px rgba(90, 160, 255, 0.35);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+    transition:
+        transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        opacity 240ms ease;
+    pointer-events: none;
+}
+
+.profile-avatar:hover::before {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.25);
+}
+
+.profile-avatar::after {
+    content: "";
+    position: absolute;
+    /* 4px less diameter than ::before (2px inset on each side) */
+    left: 50%;
+    top: 50%;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+    border-radius: 9999px;
+    border: 2px solid rgba(90, 160, 255, 0.38);
+    box-shadow: 0 0 16px rgba(90, 160, 255, 0.18);
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+    transition:
+        transform 210ms cubic-bezier(0.2, 0.8, 0.2, 1),
+        opacity 140ms ease;
+    pointer-events: none;
+}
+
+.profile-avatar:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.05);
 }
 
 .profile-avatar-img {
@@ -44,6 +91,7 @@ import LinksSection from './LinksSection.vue';
     height: 100%;
     object-fit: cover;
     display: block;
+    z-index: 1;
 }
 
 .hero-card {
