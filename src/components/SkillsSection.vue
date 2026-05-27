@@ -44,14 +44,23 @@ const skillGroups = [
 
 .skill-chip {
     margin: 2px;
-    transition: transform 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.18s ease, filter 0.18s ease;
 }
 
 .skill-chip:hover {
     transform: translateY(-2px);
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+        inset 0 0 18px rgba(108, 99, 255, 0.22);
+    filter: brightness(1.06);
 }
 
 .skills-card {
     grid-column: span 4;
+}
+
+/* Quasar renders the chip label inside .q-chip__content */
+.skill-chip:hover :deep(.q-chip__content) {
+    text-shadow: 0 0 10px rgba(108, 99, 255, 0.35);
 }
 </style>

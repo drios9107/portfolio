@@ -24,6 +24,7 @@ const getThumbnailClasses = (project: IProject) => [
   project.extraClasses,
   {
     'cursor-pointer': !!project.images?.[0],
+    'project-thumbnail2': !!project.images?.[0],
     'fit-contain-mobile-thumb': project.extraClasses === 'fit-contain'
   },
 ]
@@ -71,7 +72,7 @@ const getThumbnailClasses = (project: IProject) => [
   transition: transform 0.2s ease;
 }
 
-.project-thumbnail:hover {
+.project-thumbnail2:hover {
   transform: scale(1.03);
 }
 
