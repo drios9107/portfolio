@@ -83,6 +83,10 @@ const getThumbnailClasses = (project: IProject) => [
   min-height: 160px;
 }
 
+.project-item:hover {
+  background: #45557ee6
+}
+
 .fit-contain-mobile-thumb {
   object-fit: contain;
   background: rgba(12, 15, 23, 0.9);
