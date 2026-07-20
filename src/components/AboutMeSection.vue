@@ -8,7 +8,7 @@ import LinksSection from './LinksSection.vue';
         <q-card-section class="about-section">
             <div>
                 <div class="text-h6 text-weight-medium">About Me</div>
-                <p class="q-mt-md text-body1 about-text">
+                <p class="q-mt-md text-body2 about-text">
                     {{ profile.summary }}
                 </p>
             </div>
@@ -30,8 +30,7 @@ import LinksSection from './LinksSection.vue';
 }
 
 .about-text {
-    color: #c7cde0;
+    color: #b0b7c9;
     line-height: 1.65;
-    /* max-width: 72ch; */
 }
 </style>
