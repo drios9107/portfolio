@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type IProject } from 'src/utils/types'
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 
 const slide = ref(0)
 
@@ -8,6 +8,13 @@ const props = defineProps<{
     project: IProject
 }>()
 const dialog = defineModel<boolean>('dialog', { required: true })
+const emit = defineEmits<{
+    hide: []
+}>()
+
+watch(dialog, (open) => {
+    if (open) slide.value = 0
+})
 
 const getImageClasses = computed(() => props.project ?
     [
@@ -18,14 +25,14 @@ const getImageClasses = computed(() => props.project ?
     ] :
     [])
 
-const hasManyProjects = computed(() => props.project?.images?.length > 1)
+const hasManyProjects = computed(() => (props.project?.images?.length ?? 0) > 1)
 </script>
 
 <template>
-    <q-dialog v-model="dialog" persistent>
+    <q-dialog v-model="dialog" persistent no-refocus no-focus @hide="emit('hide')">
         <q-card class="dialog-card">
             <div v-if="!hasManyProjects" class="flex flex-center q-pa-md" style="height: 400px;">
-                <img :src="props.project.images[0]" :class="getImageClasses" />
+                <img :src="props.project.images![0]" :class="getImageClasses" />
             </div>
             <q-carousel v-if="hasManyProjects" v-model="slide" animated swipeable arrows navigation autoplay infinite
                 :autoplay-duration="3000" :transition-duration="500" height="400px" control-color="primary"

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, nextTick, ref } from 'vue'
 import { projects } from '../utils/constants'
 import { IProject } from '../utils/types'
 import CarouselDialog from './CarouselDialog.vue'
@@ -8,14 +8,25 @@ import { useQuasar } from 'quasar'
 const $q = useQuasar()
 
 const dialog = ref<boolean>(false)
-
 const activeProject = ref<IProject | null>(null)
+let lockedScrollY = 0
 
 const openModal = (project: IProject) => {
-  if (project.images?.[0]) {
-    activeProject.value = project;
-    dialog.value = true
+  if (!project.images?.[0]) return
+  lockedScrollY = window.scrollY
+  // Avoid hash-driven scroll after dialog unlocks body scroll
+  if (window.location.hash) {
+    history.replaceState(null, '', window.location.pathname + window.location.search)
   }
+  activeProject.value = project
+  dialog.value = true
+}
+
+const onDialogHide = async () => {
+  const y = lockedScrollY
+  activeProject.value = null
+  await nextTick()
+  window.scrollTo(0, y)
 }
 
 const getThumbnailClasses = (project: IProject) => [
@@ -28,7 +39,6 @@ const getThumbnailClasses = (project: IProject) => [
     'fit-contain-mobile-thumb': project.extraClasses === 'fit-contain'
   },
 ]
-
 </script>
 
 <template>
@@ -61,7 +71,12 @@ const getThumbnailClasses = (project: IProject) => [
   </q-card>
 
 
-  <carousel-dialog :project="activeProject" v-model:dialog="dialog" v-if="dialog && activeProject" />
+  <carousel-dialog
+    v-if="activeProject"
+    :project="activeProject"
+    v-model:dialog="dialog"
+    @hide="onDialogHide"
+  />
 </template>
 
 
