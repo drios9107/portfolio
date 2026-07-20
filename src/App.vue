@@ -1,4 +1,6 @@
 <script setup>
+import AboutMeSection from './components/AboutMeSection.vue';
+import AppHeader from './components/AppHeader.vue';
 import ContactFooter from './components/ContactFooter.vue';
 import JobsSection from './components/JobsSection.vue';
 import ProfileSection from './components/ProfileSection.vue';
@@ -28,8 +30,10 @@ onUnmounted(() => {
     <q-page-container>
       <q-page class="q-pa-md q-pa-lg-xl">
         <div class="dashboard-grid">
+          <AppHeader />
           <ProfileSection />
           <SkillsSection />
+          <AboutMeSection />
           <JobsSection />
           <ProjectsSection />
           <ContactFooter />

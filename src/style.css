@@ -61,6 +61,7 @@ body {
 
   .hero-card,
   .skills-card,
+  .about-card,
   .jobs-card,
   .projects-card {
     grid-column: span 12 !important;
