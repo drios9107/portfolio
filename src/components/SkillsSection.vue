@@ -14,30 +14,38 @@ const skillGroups = [
         <q-card-section>
             <div class="text-h6 text-weight-medium">Core Skills</div>
 
-            <div class="q-mt-md column q-gutter-sm">
-                <div v-for="group in skillGroups" :key="group.label">
-                    <div class="text-caption text-grey-5 q-mb-sm select-none">
-                        {{ group.label }}
-                    </div>
+            <div class="skills-grid q-mt-md">
+                <q-card
+                    v-for="group in skillGroups"
+                    :key="group.label"
+                    flat
+                    bordered
+                    class="skill-group-card"
+                >
+                    <q-card-section class="skill-group-section">
+                        <div class="text-subtitle2 text-weight-medium skill-group-label select-none">
+                            {{ group.label }}
+                        </div>
 
-                    <div class="row q-gutter-sm">
-                        <q-chip
-                            v-for="skill in group.items"
-                            :key="skill.name"
-                            :color="skill.main ? 'primary' : 'grey-9'"
-                            text-color="white"
-                            class="skill-chip select-none"
-                        >
-                            <img
-                                v-if="skill.icon"
-                                :src="skill.icon"
-                                :alt="skill.name"
-                                class="skill-icon"
-                            />
-                            {{ skill.name }}
-                        </q-chip>
-                    </div>
-                </div>
+                        <div class="row justify-center q-gutter-md q-mt-sm chip-row">
+                            <q-chip
+                                v-for="skill in group.items"
+                                :key="skill.name"
+                                :color="skill.main ? 'primary' : 'grey-9'"
+                                text-color="white"
+                                class="skill-chip select-none"
+                            >
+                                <img
+                                    v-if="skill.icon"
+                                    :src="skill.icon"
+                                    :alt="skill.name"
+                                    class="skill-icon"
+                                />
+                                {{ skill.name }}
+                            </q-chip>
+                        </div>
+                    </q-card-section>
+                </q-card>
             </div>
         </q-card-section>
     </q-card>
@@ -48,8 +56,55 @@ const skillGroups = [
     user-select: none;
 }
 
+.skills-card {
+    grid-column: span 12;
+    scroll-margin-top: 88px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.skill-group-card {
+    background: rgba(14, 17, 26, 0.65);
+    border: 1px solid rgba(108, 99, 255, 0.18);
+    border-radius: 12px;
+    height: 100%;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.skill-group-card:hover {
+    border-color: rgba(108, 99, 255, 0.4);
+    box-shadow: inset 0 0 24px rgba(108, 99, 255, 0.08);
+    transform: none;
+}
+
+.skill-group-label {
+    color: #a8b0c8;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.skill-group-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chip-row {
+    row-gap: 12px;
+    justify-content: center;
+}
+
 .skill-chip {
-    margin: 2px;
+    height: 40px;
+    padding: 0 14px;
+    font-size: 0.95rem;
+    margin: 4px 6px;
     transition: transform 0.15s ease, box-shadow 0.18s ease, filter 0.18s ease;
 }
 
@@ -62,9 +117,9 @@ const skillGroups = [
 }
 
 .skill-icon {
-    width: 16px;
-    height: 16px;
-    margin-right: 6px;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
     flex-shrink: 0;
     object-fit: contain;
 }
@@ -74,12 +129,19 @@ const skillGroups = [
     align-items: center;
 }
 
-.skills-card {
-    grid-column: span 4;
-    scroll-margin-top: 88px;
-}
-
 .skill-chip:hover :deep(.q-chip__content) {
     text-shadow: 0 0 10px rgba(108, 99, 255, 0.35);
+}
+
+@media (max-width: 1024px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
