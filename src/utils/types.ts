@@ -28,6 +28,7 @@ export interface IProfile {
 
 interface ISkill {
     name: string,
+    icon?: string,
     main?: boolean
 }
 

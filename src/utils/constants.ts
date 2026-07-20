@@ -15,26 +15,26 @@ const profile: IProfile = {
 
 const skills: ISkills = {
     frontend: [
-        { name: 'React', main: true },
-        { name: 'Next.js', main: true },
-        { name: 'Vue.js' },
-        { name: 'Quasar' }
+        { name: 'React', icon: 'https://cdn.simpleicons.org/react/61DAFB', main: true },
+        { name: 'Next.js', icon: 'https://cdn.simpleicons.org/nextdotjs/ffffff', main: true },
+        { name: 'Vue.js', icon: 'https://cdn.simpleicons.org/vuedotjs/4FC08D' },
+        { name: 'Quasar', icon: 'https://cdn.simpleicons.org/quasar/1976D2' },
     ],
     backend: [
-        { name: 'Node.js' },
-        { name: 'NestJS' },
-        { name: 'Firebase' },
-        { name: 'Laravel' },
-        { name: 'Odoo' },
+        { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
+        { name: 'NestJS', icon: 'https://cdn.simpleicons.org/nestjs/E0234E' },
+        { name: 'Firebase', icon: 'https://cdn.simpleicons.org/firebase/FFCA28' },
+        { name: 'Laravel', icon: 'https://cdn.simpleicons.org/laravel/FF2D20' },
+        { name: 'Odoo', icon: 'https://cdn.simpleicons.org/odoo/714B67' },
     ],
     database: [
-        { name: 'PostgreSQL' },
-        { name: 'MySQL' },
-        { name: 'MongoDB' }
+        { name: 'PostgreSQL', icon: 'https://cdn.simpleicons.org/postgresql/4169E1' },
+        { name: 'MySQL', icon: 'https://cdn.simpleicons.org/mysql/4479A1' },
+        { name: 'MongoDB', icon: 'https://cdn.simpleicons.org/mongodb/47A248' },
     ],
     api: [
-        { name: 'GraphQL' },
-        { name: 'REST' }
+        { name: 'GraphQL', icon: 'https://cdn.simpleicons.org/graphql/E10098' },
+        { name: 'REST', icon: 'https://cdn.simpleicons.org/openapiinitiative/6BA539' },
     ],
 }
 
