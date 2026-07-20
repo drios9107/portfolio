@@ -32,8 +32,8 @@ onUnmounted(() => {
         <div class="dashboard-grid">
           <AppHeader />
           <ProfileSection />
-          <SkillsSection />
           <AboutMeSection />
+          <SkillsSection />
           <JobsSection />
           <ProjectsSection />
           <ContactFooter />
