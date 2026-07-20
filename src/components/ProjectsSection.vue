@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, nextTick, ref } from 'vue'
+import { nextTick, ref } from 'vue'
 import { projects } from '../utils/constants'
 import { IProject } from '../utils/types'
 import CarouselDialog from './CarouselDialog.vue'
@@ -54,14 +54,16 @@ const getThumbnailClasses = (project: IProject) => [
             $q.screen.lt.md ? 'column' : 'row',
             'flex justify-between items-center project-item'
           ]">
-            <div @click="() => openModal(project)">
-              <img :src="project?.images?.[0] ?? '/no-img.svg'" :class="getThumbnailClasses(project)"
-                style="border-radius: 12px;" />
+            <div @click="() => openModal(project)" class="cursor-pointer relative-position"
+              style="width: 150px; height: 110px; border-radius: 12px; overflow: hidden;">
+              <q-img :src="project?.images?.[0] ?? '/no-img.svg'" fit="cover" class="fit" style="border-radius: 12px;">
+              </q-img>
+
             </div>
 
             <q-card-section style="flex:1; user-select: none">
               <div class="text-subtitle1 text-weight-medium">{{ project.name }}</div>
-              <div class="text-caption text-primary">{{ project.stack }}</div>
+              <div class="text-caption text-primary project-stack">{{ project.stack }}</div>
               <p class="q-mt-sm text-body2 text-grey-4">{{ project.description }}</p>
             </q-card-section>
           </q-card>
@@ -71,12 +73,7 @@ const getThumbnailClasses = (project: IProject) => [
   </q-card>
 
 
-  <carousel-dialog
-    v-if="activeProject"
-    :project="activeProject"
-    v-model:dialog="dialog"
-    @hide="onDialogHide"
-  />
+  <carousel-dialog v-if="activeProject" :project="activeProject" v-model:dialog="dialog" @hide="onDialogHide" />
 </template>
 
 
@@ -96,10 +93,20 @@ const getThumbnailClasses = (project: IProject) => [
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.06);
   min-height: 160px;
+  transition: background-color 160ms ease, border-color 160ms ease;
 }
 
 .project-item:hover {
-  background: #45557ee6
+  background: rgba(69, 85, 126, 0.72);
+  border-color: rgba(123, 140, 255, 0.35);
+}
+
+.project-item:hover .project-stack {
+  color: #d4e4ff !important;
+}
+
+.project-stack {
+  transition: color 160ms ease;
 }
 
 .fit-contain-mobile-thumb {
