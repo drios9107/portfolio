@@ -6,13 +6,25 @@ const links = [
     { label: 'Projects', href: '#projects' },
     { label: 'Contact', href: '#contact' },
 ]
+
+function scrollToSection(event: Event, href: string) {
+    event.preventDefault()
+    const id = href.replace('#', '')
+    const el = document.getElementById(id)
+    if (!el) return
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    history.replaceState(null, '', window.location.pathname + window.location.search)
+}
 </script>
 
 <template>
     <header class="app-header glass-card">
-        <a href="#top" class="brand text-weight-bold">David Rios</a>
+        <a href="#top" class="brand text-weight-bold" @click="scrollToSection($event, '#top')">
+            Home
+        </a>
         <nav class="nav">
-            <a v-for="link in links" :key="link.href" :href="link.href" class="nav-link">
+            <a v-for="link in links" :key="link.href" :href="link.href" class="nav-link"
+                @click="scrollToSection($event, link.href)">
                 {{ link.label }}
             </a>
         </nav>

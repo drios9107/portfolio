@@ -3,14 +3,16 @@ import { IExperience, IProfile, IProject, ISkills } from "./types";
 const profile: IProfile = {
     name: 'David Rios Peña',
     title: 'Senior Fullstack Engineer',
+    tagline: 'Modern, scalable web experiences that feel fast and purposeful.',
     location: 'Las Tunas, Cuba',
     email: 'drios9107@gmail.com',
     phone: '+53 54056199',
     linkedin: 'https://linkedin.com/in/david-rios-9492001b2',
     photoUrl: '/avatar.jpg',
+    cvUrl: '/cv.pdf',
     years: `${new Date().getFullYear() - 2015}+ years`,
     summary:
-        'Senior Fullstack Developer focused on scalable web products across banking, analytics and public sectors. Experienced in React, Next.js and Node.js, building performant, user-focused applications and integrating complex backend systems. Comfortable working in distributed Agile teams and delivering features from concept to production.',
+        'I build scalable web products across banking, analytics, and public-sector platforms. My focus is React, Next.js, and Node.js — shipping performant, user-focused apps and connecting them to solid backend systems. I work well in distributed Agile teams and take features from concept to production.',
 }
 
 const skills: ISkills = {

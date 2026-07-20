@@ -17,11 +17,13 @@ export interface IExperience {
 export interface IProfile {
     name: string,
     title: string,
+    tagline: string,
     location: string,
     email: string,
     phone: string,
     linkedin: string,
     photoUrl: string,
+    cvUrl: string,
     years: string,
     summary: string,
 }
