@@ -4,7 +4,7 @@ import { experience } from 'src/utils/constants';
 </script>
 
 <template>
-    <q-card flat bordered class="glass-card scroll-reveal jobs-card">
+    <q-card id="experience" flat bordered class="glass-card scroll-reveal jobs-card">
         <q-card-section>
             <div class="text-h6 text-weight-medium">Professional Experience</div>
             <q-timeline color="primary" class="q-mt-md">
@@ -83,5 +83,6 @@ import { experience } from 'src/utils/constants';
 
 .jobs-card {
     grid-column: span 12;
+    scroll-margin-top: 88px;
 }
 </style>

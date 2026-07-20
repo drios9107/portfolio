@@ -4,7 +4,7 @@ import ChipLink from './ChipLink.vue';
 </script>
 
 <template>
-    <q-card flat bordered class="glass-card text-center scroll-reveal full-span">
+    <q-card id="contact" flat bordered class="glass-card text-center scroll-reveal full-span">
         <q-card-section>
             <div class="text-h6 text-weight-medium">
                 Let's build something together
@@ -26,5 +26,6 @@ import ChipLink from './ChipLink.vue';
 <style scoped>
 .full-span {
     grid-column: span 12;
+    scroll-margin-top: 88px;
 }
 </style>

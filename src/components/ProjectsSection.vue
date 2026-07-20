@@ -32,7 +32,7 @@ const getThumbnailClasses = (project: IProject) => [
 </script>
 
 <template>
-  <q-card flat bordered class="glass-card projects-card scroll-reveal">
+  <q-card id="projects" flat bordered class="glass-card projects-card scroll-reveal">
     <q-card-section class="row items-center justify-between">
       <div class="text-h6 text-weight-medium">Project Showcase</div>
     </q-card-section>
@@ -94,5 +94,6 @@ const getThumbnailClasses = (project: IProject) => [
 
 .projects-card {
   grid-column: span 12;
+  scroll-margin-top: 88px;
 }
 </style>
