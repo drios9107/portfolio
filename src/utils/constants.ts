@@ -21,6 +21,7 @@ const skills: ISkills = {
         { name: 'Next.js', icon: 'https://cdn.simpleicons.org/nextdotjs/ffffff', main: true },
         { name: 'Vue.js', icon: 'https://cdn.simpleicons.org/vuedotjs/4FC08D' },
         { name: 'Quasar', icon: 'https://cdn.simpleicons.org/quasar/1976D2' },
+        { name: 'React Native', icon: 'https://cdn.jsdelivr.net/npm/simple-icons@v12/icons/react.svg' }
     ],
     backend: [
         { name: 'Node.js', icon: 'https://cdn.simpleicons.org/nodedotjs/339933' },
