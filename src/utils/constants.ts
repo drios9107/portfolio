@@ -212,6 +212,15 @@ const projects: IProject[] = [
         stack: 'Vue.js + Laravel',
         description:
             'Analytics platform with data visualization and performance tracking for influencer campaigns.',
+        images: [
+            '/projects/influencer-analytics-platform/Screenshot_2.png',
+            '/projects/influencer-analytics-platform/Screenshot_3.png',
+            '/projects/influencer-analytics-platform/Screenshot_4.png',
+            '/projects/influencer-analytics-platform/Screenshot_5.png',
+            '/projects/influencer-analytics-platform/Screenshot_6.png',
+            '/projects/influencer-analytics-platform/Screenshot_7.png',
+        ],
+        extraClasses: 'fit-cover'
     },
     {
         name: 'Enterprise ERP Systems',
