@@ -165,7 +165,10 @@ const projects: IProject[] = [
         stack: 'Vue.js + Laravel',
         description:
             'Fullstack features for an enterprise energy platform focused on performance and scalability.',
-        images: ['/projects/iberdrola-platform/iberdrola.png'],
+        images: [
+            '/projects/iberdrola-platform/iberdrola(1).png',
+            '/projects/iberdrola-platform/iberdrola(2).png'
+        ],
         extraClasses: 'fit-cover'
     },
     {
