@@ -21,6 +21,7 @@ export interface IProfile {
     location: string,
     email: string,
     phone: string,
+    whatsapp: string,
     linkedin: string,
     photoUrl: string,
     cvUrl: string,
