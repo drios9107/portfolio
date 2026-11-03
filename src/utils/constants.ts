@@ -6,7 +6,7 @@ const profile: IProfile = {
     tagline: 'Modern, scalable web experiences that feel fast and purposeful.',
     location: 'Brazil',
     email: 'drios9107@gmail.com',
-    phone: '+55 959 8425729',
+    phone: '+55 95 98425729',
     whatsapp: '+53 54056199',
     linkedin: 'https://linkedin.com/in/david-rios-9492001b2',
     photoUrl: '/avatar.jpg',
