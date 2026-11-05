@@ -7,7 +7,7 @@ const profile: IProfile = {
     location: 'Brazil',
     email: 'drios9107@gmail.com',
     phone: '+55 95 98425729',
-    whatsapp: '+53 54056199',
+    whatsapp: '+55 95 98425729',
     linkedin: 'https://linkedin.com/in/david-rios-9492001b2',
     photoUrl: '/avatar.jpg',
     cvUrl: '/cv.pdf',
