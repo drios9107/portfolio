@@ -69,17 +69,17 @@ const experience: IExperience[] = [
             'Integrated an AI assistant for decision support.'
         ],
     },
-
     {
         company: 'InformageStudios',
         role: 'Fullstack Developer',
         period: 'Nov 2021 - Dec 2022',
         logo: '/jobs/informage.jpg',
         highlights: [
-            'Delivered fullstack features across multiple client industries.',
-            'Built web applications using Vue.js, Laravel, React, and Next.js.',
-            'Integrated Stripe payments across frontend and backend for a debt management platform.',
-            'Collaborated with stakeholders to deliver production-ready solutions.',
+            'Delivered fullstack features across 12+ client projects in sectors including analytics, healthcare, pharmaceuticals, and energy.',
+            'Built and enhanced web applications using Vue.js, Laravel, React, and Next.js.',
+            'Developed interactive dashboards and complex data visualizations, including custom Chart.js plugins.',
+            'Integrated third-party services, including Stripe payment processing on the backend and Vozitel for debt case synchronization.',
+            'Collaborated directly with stakeholders to refine requirements and deliver production-ready solutions.',
         ],
     },
     {
