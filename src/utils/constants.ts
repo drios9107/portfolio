@@ -1,9 +1,10 @@
 import { IExperience, IProfile, IProject, ISkills } from "./types";
 
+
 const profile: IProfile = {
     name: 'David Rios Peña',
     title: 'Senior Fullstack Engineer',
-    tagline: 'Modern, scalable web experiences that feel fast and purposeful.',
+    tagline: 'Building reliable, scalable applications and meaningful digital experiences.',
     location: 'Brazil',
     email: 'drios9107@gmail.com',
     phone: '+55 95 984257295',
@@ -13,8 +14,9 @@ const profile: IProfile = {
     cvUrl: '/cv.pdf',
     years: `${new Date().getFullYear() - 2015}+ years`,
     summary:
-        'I build scalable web products across banking, analytics, and public-sector platforms. My focus is React, Next.js, and Node.js — shipping performant, user-focused apps and connecting them to solid backend systems. I work well in distributed Agile teams and take features from concept to production.',
+        'I build web and mobile applications across banking, analytics, and industrial sectors. Experienced in modern frontend and backend technologies, developing responsive interfaces, integrating APIs and backend systems, maintaining legacy codebases, and building interactive dashboards and data visualizations. I value code quality, autonomy, and collaboration, taking ownership of features from development to production.',
 }
+
 
 const skills: ISkills = {
     frontend: [
@@ -67,6 +69,7 @@ const experience: IExperience[] = [
             'Integrated an AI assistant for decision support.'
         ],
     },
+
     {
         company: 'InformageStudios',
         role: 'Fullstack Developer',
@@ -74,8 +77,9 @@ const experience: IExperience[] = [
         logo: '/jobs/informage.jpg',
         highlights: [
             'Delivered fullstack features across multiple client industries.',
-            'Built performant apps with Vue.js, Laravel, React, and Next.js.',
-            'Collaborated with stakeholders on production-ready deliveries.',
+            'Built web applications using Vue.js, Laravel, React, and Next.js.',
+            'Integrated Stripe payments across frontend and backend for a debt management platform.',
+            'Collaborated with stakeholders to deliver production-ready solutions.',
         ],
     },
     {
@@ -84,8 +88,9 @@ const experience: IExperience[] = [
         period: 'Feb 2019 - Oct 2021',
         logo: '/jobs/desoft.png',
         highlights: [
-            'Developed and maintained 8+ enterprise applications using Odoo and React for institutions.',
+            'Developed and maintained 8+ enterprise applications using Odoo and React for institutional clients.',
             'Built custom modules and user interfaces to extend platform functionality and improve usability.',
+            'Maintained and extended legacy code across multiple client-specific applications.',
             'Participated in the full software development lifecycle, including requirements analysis, development, testing, and deployment.',
         ],
     },
@@ -150,7 +155,7 @@ const projects: IProject[] = [
     },
     {
         name: 'Pharmaceutical Web App (Galenicum)',
-        stack: 'JavaScript + PostgreSQL',
+        stack: 'JavaScript + MySQL',
         description:
             'Enhanced web application for pharmaceutical workflows, improving usability and data handling.',
         images: [
@@ -174,9 +179,9 @@ const projects: IProject[] = [
     },
     {
         name: 'Company Dashboard (Inuba)',
-        stack: 'React + Next.js',
+        stack: 'React + Next.js + Chart.js',
         description:
-            'High-performance dashboard with SEO optimization and fast load times.',
+            'Healthcare and biometrics platform featuring interactive dashboards, patient management, health indicators, and thermography visualizations. Developed a significant part of the frontend, including reusable components and custom Chart.js plugins for specialized data visualizations.',
         images: [
             '/projects/inuba-dashboard/1.png',
             '/projects/inuba-dashboard/2.png',
@@ -188,9 +193,9 @@ const projects: IProject[] = [
     },
     {
         name: 'Enterprise Web Platform (Cobramus)',
-        stack: 'React + Next.js + Laravel',
+        stack: 'Laravel + Next.js + MySQL + Stripe + Vozitel API',
         description:
-            'Fullstack platform improvements focused on performance, maintainability, and user experience.',
+            'Debt recovery platform connecting creditors and debtors. Developed frontend interfaces, dashboards, forms, and backend features, integrated Stripe payment processing on the backend, and built a Vozitel integration to synchronize debt recovery cases, debtor and creditor details, outstanding amounts, payments, and case statuses.',
         images: [
             '/projects/cobramus-platform/1.png',
             '/projects/cobramus-platform/2.png'
