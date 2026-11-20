@@ -23,6 +23,7 @@ export interface IProfile {
     phone: string,
     whatsapp: string,
     linkedin: string,
+    github: string,
     photoUrl: string,
     cvUrl: string,
     years: string,

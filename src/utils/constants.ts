@@ -10,6 +10,7 @@ const profile: IProfile = {
     phone: '+55 95 984257295',
     whatsapp: '+55 95 984257295',
     linkedin: 'https://linkedin.com/in/david-rios-9492001b2',
+    github: 'https://github.com/drios9107',
     photoUrl: '/avatar.jpg',
     cvUrl: '/cv.pdf',
     years: `${new Date().getFullYear() - 2015}+ years`,
@@ -63,10 +64,12 @@ const experience: IExperience[] = [
         period: 'Oct 2022 - May 2025',
         logo: '/jobs/alphalabs.png',
         highlights: [
-            'Developed SSR analytics dashboards with Next.js.',
-            'Implemented backend services with Node.js and Firebase.',
-            'Contributed to React Native cross-platform products.',
-            'Integrated an AI assistant for decision support.'
+            'Developed and maintained analytics platforms using Next.js and Firebase, including Forts, a data-driven platform for dataset uploads, interactive dashboards, and AI-assisted decision support.',
+            'Built reusable user interfaces with React and Material UI, ensuring consistent user experiences across applications.',
+            'Used Sentry for error monitoring, debugging, and issue tracking across applications.',
+            'Contributed to a cross-platform mobile application using React Native, enabling real-time asset booking for field teams.',
+            'Designed and implemented backend services and Firebase Cloud Functions with Node.js to support real-time data synchronization.',
+            'Collaborated with product and design teams to deliver scalable, user-focused solutions.'
         ],
     },
     {
