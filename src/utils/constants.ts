@@ -143,9 +143,9 @@ const projects: IProject[] = [
         extraClasses: 'fit-cover'
     },
     {
-        name: 'Sinergia - Asset Booking App',
-        stack: 'React Native + Firebase',
-        description: 'Developed a cross-platform mobile application enabling field teams to view, book, and manage company assets in real time. The application streamlined resource management and improved coordination among team members.',
+        name: 'Sinergia - Asset Management Dashboard',
+        stack: 'Next.js + Node.js + Firebase',
+        description: 'Developed a web-based dashboard for managing and monitoring company assets. Built the frontend with Next.js and implemented backend services using Node.js and Firebase, enabling real-time data synchronization and seamless integration with the mobile application.',
         images: [
             '/projects/sinergia-analytics-platform/sinergia1.png',
             '/projects/sinergia-analytics-platform/sinergia2.png',
