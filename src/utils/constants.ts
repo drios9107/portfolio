@@ -244,10 +244,10 @@ const projects: IProject[] = [
         extraClasses: 'fit-cover'
     },
     {
-        name: 'Enterprise ERP Systems',
-        stack: 'Odoo',
+        name: 'Enterprise Solutions - Odoo',
+        stack: 'Python + Odoo + PostgreSQL',
         description:
-            'Developed and maintained multiple enterprise applications with custom modules and integrations.',
+            'Developed and customized 8+ enterprise applications for public and private sector organizations, including solutions for employee task management, performance evaluation, business planning, production control, product distribution, and IT security management. Worked with custom Odoo modules and integrations using technologies such as Microsoft SQL Server, MySQL, Grafana, Nmap, and OCS Inventory.',
         images: [
             '/projects/odoo-projects/odoo-logo.png'
         ],
