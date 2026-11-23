@@ -168,6 +168,20 @@ const projects: IProject[] = [
         extraClasses: 'fit-contain'
     },
     {
+        name: 'Forts Analytics Platform (Forts)',
+        stack: 'Next.js + Firebase + AI Integration',
+        description:
+            'Developed a data-driven platform that allows users to upload dynamic datasets and generate statistics and visualizations. Implemented interactive dashboards to explore data and an AI assistant to help users analyze information and support decision-making.',
+        images: [
+            '/projects/forts-analytics-platform/Screenshot_0.png',
+            '/projects/forts-analytics-platform/Screenshot_1.png',
+            '/projects/forts-analytics-platform/Screenshot_3.png',
+            '/projects/forts-analytics-platform/Screenshot_4.png',
+            '/projects/forts-analytics-platform/Screenshot_5.png',
+        ],
+        extraClasses: 'fit-cover'
+    },
+    {
         name: 'Pharmaceutical Web App (Galenicum)',
         stack: 'PHP + JavaScript + JVectorMap + MySQL',
         description:
@@ -244,15 +258,13 @@ const projects: IProject[] = [
         stack: 'PHP + ImageMagick + JavaScript + jsPDF + ChartJs',
         description:
             'Developed features for a web application that generates and displays different image permutations of Replus windows. Implemented image processing functionality and statistical comparisons using charts to illustrate the benefits of purchasing Replus windows, with support for generating PDF documents.',
-        images: [],
-        extraClasses: 'fit-cover'
-    },
-    {
-        name: 'Penalba8 - Training & Physiotherapy',
-        stack: 'PHP + Laravel + JavaScript + MySQL',
-        description:
-            'Developed features for a web application that allows users to create and manage training and physiotherapy sessions. Worked on application functionality and backend integration to support the organization of training and treatment activities.',
-        images: [],
+        images: [
+            '/projects/replus/replus (0).png',
+            '/projects/replus/replus (1).png',
+            '/projects/replus/replus (2).png',
+            '/projects/replus/replus (3).png',
+            '/projects/replus/replus (4).png',
+        ],
         extraClasses: 'fit-cover'
     },
     {
@@ -267,29 +279,10 @@ const projects: IProject[] = [
         name: 'Atlanta - Food E-commerce Platform',
         stack: 'PHP + JavaScript + MySQL',
         description:
-            'Developed shopping cart functionality for a web-based food sales platform. Worked on frontend interactions, backend features, and database operations to support the online purchasing process.',
-        images: [],
-        extraClasses: 'fit-cover'
-    },
-    {
-        name: 'ALD - Car Sales Platform',
-        stack: 'PHP + Laravel + Vue.js',
-        description:
-            'Developed new features for a web application focused on vehicle sales. Contributed to both frontend and backend functionality using Vue.js and Laravel to support the platform\'s business workflows.',
-        images: [],
-        extraClasses: 'fit-cover'
-    },
-    {
-        name: 'Forts Analytics Platform (Forts)',
-        stack: 'Next.js + Firebase + AI Integration',
-        description:
-            'Developed a data-driven platform that allows users to upload dynamic datasets and generate statistics and visualizations. Implemented interactive dashboards to explore data and an AI assistant to help users analyze information and support decision-making.',
+            'Developed shopping cart functionality for a web-based food sales platform, including frontend interactions, backend features, and database operations to support the online purchasing process. Also created transactional email templates for purchase confirmations, including order and payment receipt details.',
         images: [
-            '/projects/forts-analytics-platform/Screenshot_0.png',
-            '/projects/forts-analytics-platform/Screenshot_1.png',
-            '/projects/forts-analytics-platform/Screenshot_3.png',
-            '/projects/forts-analytics-platform/Screenshot_4.png',
-            '/projects/forts-analytics-platform/Screenshot_5.png',
+            '/projects/atlanta/atlanta 1.png',
+            '/projects/atlanta/atlanta 2.png'
         ],
         extraClasses: 'fit-cover'
     },

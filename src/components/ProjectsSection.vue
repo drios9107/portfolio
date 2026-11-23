@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nextTick, ref } from 'vue'
+import { nextTick, onMounted, onUnmounted, reactive, ref } from 'vue'
 import { projects } from '../utils/constants'
 import { IProject } from '../utils/types'
 import CarouselDialog from './CarouselDialog.vue'
@@ -39,6 +39,52 @@ const getThumbnailClasses = (project: IProject) => [
     'fit-contain-mobile-thumb': project.extraClasses === 'fit-contain'
   },
 ]
+
+const expanded = reactive<Record<string, boolean>>({})
+const canExpand = reactive<Record<string, boolean>>({})
+const descEls = new Map<string, HTMLElement>()
+let descObserver: ResizeObserver | undefined
+
+function registerDesc(name: string, el: unknown) {
+  if (el instanceof HTMLElement) descEls.set(name, el)
+  else descEls.delete(name)
+}
+
+function measureDescriptions() {
+  for (const [name, el] of descEls) {
+    if (expanded[name]) continue
+    canExpand[name] = el.scrollHeight > el.clientHeight + 2
+  }
+}
+
+function toggleDescription(name: string) {
+  const el = descEls.get(name)
+  if (!el) return
+
+  if (expanded[name]) {
+    el.style.maxHeight = `${el.scrollHeight}px`
+    requestAnimationFrame(() => {
+      el.style.maxHeight = ''
+      expanded[name] = false
+    })
+    return
+  }
+
+  expanded[name] = true
+  el.style.maxHeight = `${el.scrollHeight}px`
+}
+
+onMounted(() => {
+  descObserver = new ResizeObserver(() => measureDescriptions())
+  nextTick(() => {
+    for (const el of descEls.values()) descObserver?.observe(el)
+    measureDescriptions()
+  })
+})
+
+onUnmounted(() => {
+  descObserver?.disconnect()
+})
 </script>
 
 <template>
@@ -64,7 +110,29 @@ const getThumbnailClasses = (project: IProject) => [
             <q-card-section style="flex:1; user-select: none">
               <div class="text-subtitle1 text-weight-medium">{{ project.name }}</div>
               <div class="text-caption text-primary project-stack">{{ project.stack }}</div>
-              <p class="q-mt-sm text-body2 text-grey-4">{{ project.description }}</p>
+              <p
+                :ref="(el) => registerDesc(project.name, el)"
+                class="q-mt-sm text-body2 text-grey-4 project-description"
+                :class="{
+                  'is-expanded': expanded[project.name],
+                  'is-clamped': canExpand[project.name] && !expanded[project.name],
+                }"
+              >{{ project.description }}</p>
+              <button
+                v-if="canExpand[project.name]"
+                type="button"
+                class="see-more"
+                :aria-expanded="!!expanded[project.name]"
+                @click="toggleDescription(project.name)"
+              >
+                {{ expanded[project.name] ? 'Ver menos' : 'Ver más' }}
+                <q-icon
+                  name="expand_more"
+                  size="16px"
+                  class="see-more-icon"
+                  :class="{ 'is-open': expanded[project.name] }"
+                />
+              </button>
             </q-card-section>
           </q-card>
         </div>
@@ -117,5 +185,46 @@ const getThumbnailClasses = (project: IProject) => [
 .projects-card {
   grid-column: span 12;
   scroll-margin-top: 88px;
+}
+
+.project-description {
+  line-height: 1.5;
+  max-height: 4.5em;
+  overflow: hidden;
+  transition: max-height 420ms cubic-bezier(0.22, 0.8, 0.24, 1);
+}
+
+.project-description.is-clamped {
+  -webkit-mask-image: linear-gradient(#000 62%, transparent);
+  mask-image: linear-gradient(#000 62%, transparent);
+}
+
+.see-more {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  width: fit-content;
+  margin-top: 6px;
+  margin-left: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #9eb6ff;
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.see-more:hover {
+  color: #d4e4ff;
+}
+
+.see-more-icon {
+  transition: transform 280ms cubic-bezier(0.22, 0.8, 0.24, 1);
+}
+
+.see-more-icon.is-open {
+  transform: rotate(180deg);
 }
 </style>
