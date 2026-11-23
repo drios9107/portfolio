@@ -133,10 +133,19 @@ const projects: IProject[] = [
         extraClasses: 'fit-cover'
     },
     {
-        name: 'Booking and Analytics Platform (Sinergia / Aqva)',
+        name: 'Aqva - Analytics Platform',
         stack: 'Next.js + Firebase',
-        description:
-            'Server-side rendered analytics dashboards with real-time data synchronization and optimized performance.',
+        description: 'Developed a web-based analytics platform focused on data visualization through interactive dashboards. Implemented server-side rendering (SSR) and real-time data synchronization to provide users with up-to-date information.',
+        images: [
+            '/projects/aqva-analytics-platform/aqva1.png',
+            '/projects/aqva-analytics-platform/aqva2.png',
+        ],
+        extraClasses: 'fit-cover'
+    },
+    {
+        name: 'Sinergia - Asset Booking App',
+        stack: 'React Native + Firebase',
+        description: 'Developed a cross-platform mobile application enabling field teams to view, book, and manage company assets in real time. The application streamlined resource management and improved coordination among team members.',
         images: [
             '/projects/sinergia-analytics-platform/sinergia1.png',
             '/projects/sinergia-analytics-platform/sinergia2.png',
