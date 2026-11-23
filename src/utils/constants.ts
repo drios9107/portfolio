@@ -219,14 +219,14 @@ const projects: IProject[] = [
         ],
         extraClasses: 'fit-cover'
     },
-    {
-        name: 'INuba Partners Dashboard',
-        stack: 'Next.js + Firebase + Storybook',
-        description:
-            'Developed a web-based dashboard for managing the company\'s telephone booths and client information. Built with Next.js and Firebase, using Storybook to develop and organize reusable UI components.',
-        images: [],
-        extraClasses: 'fit-cover'
-    },
+    // {
+    //     name: 'INuba Partners Dashboard',
+    //     stack: 'Next.js + Firebase + Storybook',
+    //     description:
+    //         'Developed a web-based dashboard for managing the company\'s telephone booths and client information. Built with Next.js and Firebase, using Storybook to develop and organize reusable UI components.',
+    //     images: [],
+    //     extraClasses: 'fit-cover'
+    // },
     {
         name: 'Enterprise Web Platform (Cobramus)',
         stack: 'Laravel + Next.js + MySQL + Stripe + Vozitel API',
@@ -267,14 +267,14 @@ const projects: IProject[] = [
         ],
         extraClasses: 'fit-cover'
     },
-    {
-        name: 'AteneoBox - Student Grading System',
-        stack: 'PHP + MySQL',
-        description:
-            'Developed new features and database queries for a student grading system. Implemented data retrieval and processing functionality to generate different lists and reports based on students\' grades and academic records.',
-        images: [],
-        extraClasses: 'fit-cover'
-    },
+    // {
+    //     name: 'AteneoBox - Student Grading System',
+    //     stack: 'PHP + MySQL',
+    //     description:
+    //         'Developed new features and database queries for a student grading system. Implemented data retrieval and processing functionality to generate different lists and reports based on students\' grades and academic records.',
+    //     images: [],
+    //     extraClasses: 'fit-cover'
+    // },
     {
         name: 'Atlanta - Food E-commerce Platform',
         stack: 'PHP + JavaScript + MySQL',
