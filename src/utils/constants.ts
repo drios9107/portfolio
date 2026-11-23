@@ -113,7 +113,7 @@ const projects: IProject[] = [
         name: 'Expenses Tracker',
         stack: 'React + Node.js',
         description:
-            'Fullstack expense tracking app with role-based access, debt reminders, and multi-currency support.',
+            'Fullstack expense tracking application featuring role-based access control, debt reminders, and multi-currency support. Designed to help users organize expenses, manage financial records, and keep track of outstanding debts.',
         images: [
             '/projects/expenses-tracker/1.png',
             '/projects/expenses-tracker/2.png',
@@ -125,7 +125,7 @@ const projects: IProject[] = [
         name: 'Banking Operations Dashboard (Wimcorp)',
         stack: 'Vue + Quasar + NestJS',
         description:
-            'Internal dashboard for financial operations monitoring and workflow management.',
+            'Internal banking operations platform featuring multiple modules for different business departments. Developed interfaces and backend functionality to support banking operations, administrative workflows, financial processes, and day-to-day business management.',
         images: [
             '/projects/banking-dashboard-wimcorp/1.png',
             '/projects/banking-dashboard-wimcorp/3.png',
@@ -133,9 +133,10 @@ const projects: IProject[] = [
         extraClasses: 'fit-cover'
     },
     {
-        name: 'Aqva - Analytics Platform',
-        stack: 'Next.js + Firebase',
-        description: 'Developed a web-based analytics platform focused on data visualization through interactive dashboards. Implemented server-side rendering (SSR) and real-time data synchronization to provide users with up-to-date information.',
+        name: 'Aqva - Investment Platform',
+        stack: 'Next.js + Node.js + Firebase',
+        description:
+            'Developed a web-based investment platform that allows users to manage investments and create personalized financial plans. Built interactive interfaces and data-driven features with Next.js, implementing server-side rendering (SSR) and real-time data synchronization. Also developed backend services and Firebase Cloud Functions using Node.js to support server-side processes, business logic, and communication with the application.',
         images: [
             '/projects/aqva-analytics-platform/aqva1.png',
             '/projects/aqva-analytics-platform/aqva2.png',
@@ -145,7 +146,8 @@ const projects: IProject[] = [
     {
         name: 'Sinergia - Asset Management Dashboard',
         stack: 'Next.js + Node.js + Firebase',
-        description: 'Developed a web-based dashboard for managing and monitoring company assets. Built the frontend with Next.js and implemented backend services using Node.js and Firebase, enabling real-time data synchronization and seamless integration with the mobile application.',
+        description:
+            'Developed a web-based asset management dashboard that allows the company to manage and provide asset booking services. Built the frontend with Next.js and backend services using Node.js and Firebase, enabling teams to manage assets, monitor bookings and availability, and synchronize information with the mobile application in real time.',
         images: [
             '/projects/sinergia-analytics-platform/sinergia1.png',
             '/projects/sinergia-analytics-platform/sinergia2.png',
@@ -157,7 +159,7 @@ const projects: IProject[] = [
         name: 'Asset Booking Mobile App (Sinergia App)',
         stack: 'React Native + Firebase',
         description:
-            'Cross-platform mobile app enabling field teams to book and manage assets in real time.',
+            'Developed a mobile application that allows users to request reservations for different company assets. Built with React Native and Firebase, providing mobile access to the asset booking service and synchronization with the company platform.',
         images: [
             '/projects/sinergia-mobile-app/sinergia_app1.png',
             '/projects/sinergia-mobile-app/sinergia_app2.png',
@@ -167,9 +169,9 @@ const projects: IProject[] = [
     },
     {
         name: 'Pharmaceutical Web App (Galenicum)',
-        stack: 'JavaScript + MySQL',
+        stack: 'PHP + JavaScript + JVectorMap + MySQL',
         description:
-            'Enhanced web application for pharmaceutical workflows, improving usability and data handling.',
+            'Developed new features and database queries for a custom CMS used by a pharmaceutical company. Worked on frontend functionality, data management, and interactive geographical visualizations using JVectorMap.',
         images: [
             '/projects/galenicum-web-app/1.png',
             '/projects/galenicum-web-app/2.png',
@@ -179,10 +181,10 @@ const projects: IProject[] = [
         extraClasses: 'fit-cover'
     },
     {
-        name: 'Event Platform (Iberdrola 2022)',
-        stack: 'Vue.js + Laravel',
+        name: 'Event Management Platform (Iberdrola)',
+        stack: 'PHP + Laravel + Vue.js + MySQL',
         description:
-            'Fullstack features for an enterprise energy platform focused on performance and scalability.',
+            'Developed features for a web application designed to manage an event\'s resources, guests, and tasks. Worked across the Laravel backend and Vue.js frontend to support event organization and administrative workflows.',
         images: [
             '/projects/iberdrola-platform/iberdrola(1).png',
             '/projects/iberdrola-platform/iberdrola(2).png'
@@ -190,10 +192,10 @@ const projects: IProject[] = [
         extraClasses: 'fit-cover'
     },
     {
-        name: 'Company Dashboard (Inuba)',
+        name: 'INuba Clinic - Health & Biometrics Platform',
         stack: 'React + Next.js + Chart.js',
         description:
-            'Healthcare and biometrics platform featuring interactive dashboards, patient management, health indicators, and thermography visualizations. Developed a significant part of the frontend, including reusable components and custom Chart.js plugins for specialized data visualizations.',
+            'Developed a significant part of the frontend for a comprehensive health and biometrics platform designed for clinical patient assessment, including athlete health monitoring. Built reusable components for patient profiles, anamnesis forms, 3D avatars, and interactive dashboards featuring body composition, thermography, and health indicators. Implemented custom Chart.js plugins and API integrations to support specialized data visualization.',
         images: [
             '/projects/inuba-dashboard/1.png',
             '/projects/inuba-dashboard/2.png',
@@ -204,10 +206,18 @@ const projects: IProject[] = [
         extraClasses: 'fit-cover'
     },
     {
+        name: 'INuba Partners Dashboard',
+        stack: 'Next.js + Firebase + Storybook',
+        description:
+            'Developed a web-based dashboard for managing the company\'s telephone booths and client information. Built with Next.js and Firebase, using Storybook to develop and organize reusable UI components.',
+        images: [],
+        extraClasses: 'fit-cover'
+    },
+    {
         name: 'Enterprise Web Platform (Cobramus)',
         stack: 'Laravel + Next.js + MySQL + Stripe + Vozitel API',
         description:
-            'Debt recovery platform connecting creditors and debtors. Developed frontend interfaces, dashboards, forms, and backend features, integrated Stripe payment processing on the backend, and built a Vozitel integration to synchronize debt recovery cases, debtor and creditor details, outstanding amounts, payments, and case statuses.',
+            'Debt recovery platform connecting creditors and debtors through a legal intermediary service. Developed frontend interfaces, dashboards, and forms, implemented tax identification validation for Spanish individuals and companies, integrated Stripe payments across frontend and backend, and built a Vozitel integration to synchronize recovery cases, debtor and creditor details, outstanding amounts, payments, and case statuses.',
         images: [
             '/projects/cobramus-platform/1.png',
             '/projects/cobramus-platform/2.png'
@@ -215,24 +225,10 @@ const projects: IProject[] = [
         extraClasses: 'fit-cover'
     },
     {
-        name: 'Forts Analytics Platform (Forts)',
-        stack: 'Next.js + Firebase + AI Integration',
-        description:
-            'Data-driven platform for analyzing datasets, featuring interactive dashboards and an AI assistant to support user decision-making.',
-        images: [
-            '/projects/forts-analytics-platform/Screenshot_0.png',
-            '/projects/forts-analytics-platform/Screenshot_1.png',
-            '/projects/forts-analytics-platform/Screenshot_3.png',
-            '/projects/forts-analytics-platform/Screenshot_4.png',
-            '/projects/forts-analytics-platform/Screenshot_5.png',
-        ],
-        extraClasses: 'fit-cover'
-    },
-    {
         name: 'Influencer Analytics Platform (Influencer Advisor)',
-        stack: 'Vue.js + Laravel',
+        stack: 'PHP + Laravel + Vue.js + MySQL',
         description:
-            'Analytics platform with data visualization and performance tracking for influencer campaigns.',
+            'Developed features for a web application that enables companies to rate and classify influencers based on different popularity metrics and performance parameters. Worked on the Laravel backend and Vue.js frontend to support influencer evaluation and classification.',
         images: [
             '/projects/influencer-analytics-platform/Screenshot_2.png',
             '/projects/influencer-analytics-platform/Screenshot_3.png',
@@ -240,6 +236,60 @@ const projects: IProject[] = [
             '/projects/influencer-analytics-platform/Screenshot_5.png',
             '/projects/influencer-analytics-platform/Screenshot_6.png',
             '/projects/influencer-analytics-platform/Screenshot_7.png',
+        ],
+        extraClasses: 'fit-cover'
+    },
+    {
+        name: 'Replus - Window Builder Web App',
+        stack: 'PHP + ImageMagick + JavaScript + jsPDF + ChartJs',
+        description:
+            'Developed features for a web application that generates and displays different image permutations of Replus windows. Implemented image processing functionality and statistical comparisons using charts to illustrate the benefits of purchasing Replus windows, with support for generating PDF documents.',
+        images: [],
+        extraClasses: 'fit-cover'
+    },
+    {
+        name: 'Penalba8 - Training & Physiotherapy',
+        stack: 'PHP + Laravel + JavaScript + MySQL',
+        description:
+            'Developed features for a web application that allows users to create and manage training and physiotherapy sessions. Worked on application functionality and backend integration to support the organization of training and treatment activities.',
+        images: [],
+        extraClasses: 'fit-cover'
+    },
+    {
+        name: 'AteneoBox - Student Grading System',
+        stack: 'PHP + MySQL',
+        description:
+            'Developed new features and database queries for a student grading system. Implemented data retrieval and processing functionality to generate different lists and reports based on students\' grades and academic records.',
+        images: [],
+        extraClasses: 'fit-cover'
+    },
+    {
+        name: 'Atlanta - Food E-commerce Platform',
+        stack: 'PHP + JavaScript + MySQL',
+        description:
+            'Developed shopping cart functionality for a web-based food sales platform. Worked on frontend interactions, backend features, and database operations to support the online purchasing process.',
+        images: [],
+        extraClasses: 'fit-cover'
+    },
+    {
+        name: 'ALD - Car Sales Platform',
+        stack: 'PHP + Laravel + Vue.js',
+        description:
+            'Developed new features for a web application focused on vehicle sales. Contributed to both frontend and backend functionality using Vue.js and Laravel to support the platform\'s business workflows.',
+        images: [],
+        extraClasses: 'fit-cover'
+    },
+    {
+        name: 'Forts Analytics Platform (Forts)',
+        stack: 'Next.js + Firebase + AI Integration',
+        description:
+            'Developed a data-driven platform that allows users to upload dynamic datasets and generate statistics and visualizations. Implemented interactive dashboards to explore data and an AI assistant to help users analyze information and support decision-making.',
+        images: [
+            '/projects/forts-analytics-platform/Screenshot_0.png',
+            '/projects/forts-analytics-platform/Screenshot_1.png',
+            '/projects/forts-analytics-platform/Screenshot_3.png',
+            '/projects/forts-analytics-platform/Screenshot_4.png',
+            '/projects/forts-analytics-platform/Screenshot_5.png',
         ],
         extraClasses: 'fit-cover'
     },
@@ -257,9 +307,11 @@ const projects: IProject[] = [
         name: 'Private Client',
         stack: 'ASP.NET MVC + SQL Server',
         description:
-            'Built enterprise-grade applications for institutional clients, focusing on reliability and data integrity.',
-    },
-];
+            'Developed custom web applications using ASP.NET MVC and SQL Server, implementing application features, business logic, and database functionality to support the client\'s operational needs.',
+        images: [],
+        extraClasses: 'fit-cover'
+    }
+]
 
 
 export { experience, profile, skills, projects }
