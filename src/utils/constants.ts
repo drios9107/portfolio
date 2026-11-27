@@ -52,10 +52,12 @@ const experience: IExperience[] = [
         period: 'Aug 2025 - Feb 2026',
         logo: '/jobs/wimix.png',
         highlights: [
-            'Built banking dashboards using Vue.js and Quasar for financial operations.',
-            'Developed backend services and APIs with Node.js and NestJS, supporting scalable and maintainable architectures.',
-            'Integrated frontend applications with REST APIs and real-time data flows.',
-            'Delivered production-ready features in Agile, cross-functional teams.',
+            'Developed fullstack features for banking applications using Vue.js, Quasar, NestJS, and TypeORM.',
+            'Implemented backend components, including database entities, DTOs, services, and controllers.',
+            'Built frontend views for data listing, search filters, and CRUD operations using Vue.js and Quasar.',
+            'Integrated frontend components with backend REST APIs to support data management and business workflows.',
+            'Developed complex forms, including forms with nested arrays of related records and child elements.',
+            'Collaborated with cross-functional teams to deliver features for banking operations, administration, and financial management.'
         ],
     },
     {
@@ -64,11 +66,13 @@ const experience: IExperience[] = [
         period: 'Oct 2022 - May 2025',
         logo: '/jobs/alphalabs.png',
         highlights: [
-            'Developed and maintained analytics platforms using Next.js and Firebase, including Forts, a data-driven platform for dataset uploads, interactive dashboards, and AI-assisted decision support.',
-            'Built reusable user interfaces with React and Material UI, ensuring consistent user experiences across applications.',
+            'Developed and maintained web applications using Next.js, React, and Firebase, including analytics platforms, investment solutions, and business management systems.',
+            'Contributed to the development of Sinergia, an asset management and booking platform serving more than 8,000 users.',
+            'Built complex frontend interfaces for Aqva, including multi-tab forms with extensive nested data structures, validations, and dynamic data management workflows using React, Material UI, and Redux.',
+            'Developed backend services and Firebase Cloud Functions using Node.js to support application features and real-time data synchronization.',
+            'Contributed to a cross-platform mobile application using React Native and Firebase for asset booking.',
+            'Built interactive dashboards and data visualizations, including Forts, a platform for exploring uploaded datasets and AI-assisted decision support.',
             'Used Sentry for error monitoring, debugging, and issue tracking across applications.',
-            'Contributed to a cross-platform mobile application using React Native, enabling real-time asset booking for field teams.',
-            'Designed and implemented backend services and Firebase Cloud Functions with Node.js to support real-time data synchronization.',
             'Collaborated with product and design teams to deliver scalable, user-focused solutions.'
         ],
     },
@@ -80,6 +84,7 @@ const experience: IExperience[] = [
         highlights: [
             'Delivered fullstack features across 12+ client projects in sectors including analytics, healthcare, pharmaceuticals, and energy.',
             'Built and enhanced web applications using Vue.js, Laravel, React, and Next.js.',
+            'Modernized legacy applications by rebuilding frontend architectures and redesigning user interfaces with modern React and Next.js technologies.',
             'Developed interactive dashboards and complex data visualizations, including custom Chart.js plugins.',
             'Integrated third-party services, including Stripe payment processing on the backend and Vozitel for debt case synchronization.',
             'Collaborated directly with stakeholders to refine requirements and deliver production-ready solutions.',
@@ -124,8 +129,7 @@ const projects: IProject[] = [
     {
         name: 'Banking Operations Dashboard (Wimcorp)',
         stack: 'Vue + Quasar + NestJS',
-        description:
-            'Internal banking operations platform featuring multiple modules for different business departments. Developed interfaces and backend functionality to support banking operations, administrative workflows, financial processes, and day-to-day business management.',
+        description: 'Fullstack banking operations platform featuring multiple modules for different business departments. Developed backend functionality using NestJS and TypeORM, including entities, DTOs, services, and controllers. Built frontend interfaces with Vue.js and Quasar for data listing, search filters, and CRUD operations, integrating them with REST APIs. Also implemented complex forms with nested arrays of related records and child elements.',
         images: [
             '/projects/banking-dashboard-wimcorp/1.png',
             '/projects/banking-dashboard-wimcorp/3.png',
@@ -134,9 +138,9 @@ const projects: IProject[] = [
     },
     {
         name: 'Aqva - Investment Platform',
-        stack: 'Next.js + Node.js + Firebase',
+        stack: 'Next.js + React + Node.js + Firebase + Redux + Material UI',
         description:
-            'Developed a web-based investment platform that allows users to manage investments and create personalized financial plans. Built interactive interfaces and data-driven features with Next.js, implementing server-side rendering (SSR) and real-time data synchronization. Also developed backend services and Firebase Cloud Functions using Node.js to support server-side processes, business logic, and communication with the application.',
+            'Developed a web-based investment platform that allows users to manage investments and create personalized financial plans. Worked as one of two developers, contributing to both frontend and backend development throughout the project. Built complex account management interfaces with eight functional sections, implementing custom validations and handling extensive nested data structures, related records, and dynamic data management workflows using React, Next.js, Material UI, and Redux. Also developed backend services and Firebase Cloud Functions using Node.js to support business logic, server-side processes, and real-time data synchronization.',
         images: [
             '/projects/aqva-analytics-platform/aqva1.png',
             '/projects/aqva-analytics-platform/aqva2.png',
@@ -147,11 +151,11 @@ const projects: IProject[] = [
         name: 'Sinergia - Asset Management Dashboard',
         stack: 'Next.js + Node.js + Firebase',
         description:
-            'Developed a web-based asset management dashboard that allows the company to manage and provide asset booking services. Built the frontend with Next.js and backend services using Node.js and Firebase, enabling teams to manage assets, monitor bookings and availability, and synchronize information with the mobile application in real time.',
+            'Developed a web-based asset management and booking platform serving more than 8,000 users. Built the frontend with Next.js and backend services using Node.js and Firebase, enabling teams to manage company assets, monitor bookings and availability, and synchronize information with the mobile application in real time.',
         images: [
             '/projects/sinergia-analytics-platform/sinergia1.png',
             '/projects/sinergia-analytics-platform/sinergia2.png',
-            '/projects/sinergia-analytics-platform/sinergia3.png',
+            '/projects/sinergia-analytics-platform/sinergia3.png'
         ],
         extraClasses: 'fit-cover'
     },
@@ -229,9 +233,9 @@ const projects: IProject[] = [
     // },
     {
         name: 'Enterprise Web Platform (Cobramus)',
-        stack: 'Laravel + Next.js + MySQL + Stripe + Vozitel API',
+        stack: 'Laravel + React + Next.js + MySQL + Stripe + Vozitel API',
         description:
-            'Debt recovery platform connecting creditors and debtors through a legal intermediary service. Developed frontend interfaces, dashboards, and forms, implemented tax identification validation for Spanish individuals and companies, integrated Stripe payments across frontend and backend, and built a Vozitel integration to synchronize recovery cases, debtor and creditor details, outstanding amounts, payments, and case statuses.',
+            'Debt recovery platform connecting creditors and debtors through a legal intermediary service. Contributed to the complete rebuild and redesign of an existing legacy application, replacing its class-based React implementation with a new Next.js architecture. Developed frontend layouts, dashboards, and forms, including Spanish tax identification validation for individuals and companies (DNI, NIE, CIF, and NIF). Implemented backend Stripe payment integration and a Vozitel integration to synchronize recovery cases, debtor and creditor details, outstanding amounts, payments, and case statuses.',
         images: [
             '/projects/cobramus-platform/1.png',
             '/projects/cobramus-platform/2.png'
