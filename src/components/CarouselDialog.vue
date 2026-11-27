@@ -29,7 +29,7 @@ const hasManyProjects = computed(() => (props.project?.images?.length ?? 0) > 1)
 </script>
 
 <template>
-    <q-dialog v-model="dialog" persistent no-refocus no-focus @hide="emit('hide')">
+    <q-dialog v-model="dialog" no-refocus no-focus @hide="emit('hide')">
         <q-card class="dialog-card">
             <div v-if="!hasManyProjects" class="flex flex-center q-pa-md" style="height: 400px;">
                 <img :src="props.project.images![0]" :class="getImageClasses" />
